@@ -59,9 +59,11 @@ public class SignupPage extends javax.swing.JFrame {
         rSFotoSquareResizeBeanInfo1 = new rojerusan.RSFotoSquareResizeBeanInfo();
         buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel2 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        rSLabelImage1 = new rojerusan.RSLabelImage();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        rSLabelImage2 = new rojerusan.RSLabelImage();
         jPanel1 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -93,15 +95,25 @@ public class SignupPage extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel2.setFont(new java.awt.Font("AppleMyungjo", 1, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(51, 51, 255));
-        jLabel2.setText("Welcome To Smart Library");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 240, 350, 50));
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(234, 1191, -1, -1));
 
-        rSLabelImage1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/boock stack.jpg"))); // NOI18N
-        jPanel2.add(rSLabelImage1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 360, 750));
+        jLabel4.setFont(new java.awt.Font("AppleMyungjo", 1, 36)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(212, 226, 244));
+        jLabel4.setText("Welcome");
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 140, 280, 90));
+
+        jLabel5.setFont(new java.awt.Font("Glass Antiqua", 0, 36)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(212, 226, 244));
+        jLabel5.setText("to");
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 250, 100, 50));
+
+        jLabel12.setFont(new java.awt.Font("Glass Antiqua", 0, 36)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(212, 226, 244));
+        jLabel12.setText("Smart Library");
+        jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 350, -1, -1));
+
+        rSLabelImage2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Library_statistics.jpeg"))); // NOI18N
+        jPanel2.add(rSLabelImage2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 990, 840));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 990, 830));
 
@@ -351,16 +363,18 @@ public class SignupPage extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
@@ -371,7 +385,7 @@ public class SignupPage extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButton2;
     private rojeru_san.componentes.RSDateChooser rSDateChooser1;
     private rojerusan.RSFotoSquareResizeBeanInfo rSFotoSquareResizeBeanInfo1;
-    private rojerusan.RSLabelImage rSLabelImage1;
+    private rojerusan.RSLabelImage rSLabelImage2;
     private app.bolivia.swing.JCTextField txt_contact;
     private app.bolivia.swing.JCTextField txt_email;
     private javax.swing.JPasswordField txt_password;

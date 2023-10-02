@@ -8,6 +8,7 @@ import java.util.Vector;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import java.sql.*;
+import javax.swing.JScrollBar;
 
 /**
  *
@@ -24,6 +25,9 @@ public class ManageBooksPanel extends javax.swing.JPanel {
         initComponents();
         model = (DefaultTableModel)tbl_booklist.getModel();
         load_books_from_db();
+        JScrollBar verticalScrollBar = jScrollPane1.getVerticalScrollBar();
+        verticalScrollBar.setUnitIncrement(20);
+        verticalScrollBar.setBlockIncrement(200);
     }
 
     public void load_books_from_db() {

@@ -50,12 +50,12 @@ public class LoginPage extends javax.swing.JFrame {
             ResultSet rs = pat.executeQuery();
             
             if (rs.next()) {
-                this.setVisible(false);
                 if (rb_user.isSelected()) {
-                    new LandingPage().setVisible(true);
+                    new UserHome().setVisible(true);
                 } else {
                     new HomePage().setVisible(true);
                 }
+                this.setVisible(false);
                 this.dispose();
             } else {
                 JOptionPane.showMessageDialog(this, "Username and password didn't match");
@@ -292,8 +292,8 @@ public class LoginPage extends javax.swing.JFrame {
 
     private void rSMaterialButtonCircle1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonCircle1ActionPerformed
         // TODO add your handling code here:
-        this.setVisible(false);
         new booksh.SignupPage().setVisible(true);
+        this.setVisible(false);
         this.dispose();
     }//GEN-LAST:event_rSMaterialButtonCircle1ActionPerformed
 

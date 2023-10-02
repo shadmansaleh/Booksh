@@ -8,12 +8,12 @@ package booksh;
  *
  * @author Adil313
  */
-public class LandingPage extends javax.swing.JFrame {
+public class UserHome_deprecated extends javax.swing.JFrame {
 
     /**
      * Creates new form LandingPage
      */
-    public LandingPage() {
+    public UserHome_deprecated() {
         initComponents();
     }
 
@@ -34,7 +34,6 @@ public class LandingPage extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        rSLabelImage2 = new rojerusan.RSLabelImage();
         jTextField3 = new javax.swing.JTextField();
         rSLabelImage3 = new rojerusan.RSLabelImage();
         jPanel4 = new javax.swing.JPanel();
@@ -95,9 +94,6 @@ public class LandingPage extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Library Management System");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 20, -1, -1));
-
-        rSLabelImage2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/adminIcons/male_user_50px.png"))); // NOI18N
-        jPanel1.add(rSLabelImage2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 10, 50, 50));
 
         jTextField3.setBackground(new java.awt.Color(51, 102, 255));
         jTextField3.setFont(new java.awt.Font("Glass Antiqua", 0, 24)); // NOI18N
@@ -473,20 +469,23 @@ public class LandingPage extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(LandingPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(UserHome_deprecated.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(LandingPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(UserHome_deprecated.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(LandingPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(UserHome_deprecated.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(LandingPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(UserHome_deprecated.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new LandingPage().setVisible(true);
+                new UserHome_deprecated().setVisible(true);
             }
         });
     }
@@ -534,7 +533,6 @@ public class LandingPage extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private rojerusan.RSLabelImage rSLabelImage1;
-    private rojerusan.RSLabelImage rSLabelImage2;
     private rojerusan.RSLabelImage rSLabelImage3;
     private rojeru_san.componentes.RSYearDateBeanInfo rSYearDateBeanInfo1;
     private rojeru_san.componentes.RSYearDateBeanInfo rSYearDateBeanInfo2;

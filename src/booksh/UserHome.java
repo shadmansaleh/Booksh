@@ -21,7 +21,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author shadman
  */
-public class HomePage extends javax.swing.JFrame {
+public class UserHome extends javax.swing.JFrame {
 
     int sbcurActive = 0;
     ArrayList<JLabel> sblabels = new ArrayList<>();
@@ -30,9 +30,9 @@ public class HomePage extends javax.swing.JFrame {
     /**
      * Creates new form HomePage
      */
-    public HomePage() {
+    public UserHome() {
         initComponents();
-        showPieChart();
+//        showPieChart();
         sblabels.add(sbl1);
         sblabels.add(sbl2);
         sblabels.add(sbl3);
@@ -53,8 +53,8 @@ public class HomePage extends javax.swing.JFrame {
     }
 
     public void update_dashboard_data() {
-        load_books_from_db();
-        txt_bookcount.setText(String.valueOf(get_bookcount()));
+//        load_books_from_db();
+//        txt_bookcount.setText(String.valueOf(get_bookcount()));
     }
 
     public int get_bookcount() {
@@ -81,49 +81,49 @@ public class HomePage extends javax.swing.JFrame {
     }
 
     public void showPieChart() {
-
-        //create dataset
-        DefaultPieDataset barDataset = new DefaultPieDataset();
-        barDataset.setValue("Atomic Habits", Double.valueOf(20));
-        barDataset.setValue("Shoe Dog", Double.valueOf(30));
-
-        //create chart
-        JFreeChart piechart = ChartFactory.createPieChart("Book sales", barDataset, false, true, false);//explain
-
-        PiePlot piePlot = (PiePlot) piechart.getPlot();
-
-        //changing pie chart blocks colors
-        piePlot.setSectionPaint("Atomic Habits", new Color(255, 255, 102));
-        piePlot.setSectionPaint("Shoe Dog", new Color(102, 255, 102));
-
-        piePlot.setBackgroundPaint(new Color(220, 240, 240));
-
-        //create chartPanel to display chart(graph)
-        ChartPanel barChartPanel = new ChartPanel(piechart);
-        pnl_pichart.removeAll();
-        pnl_pichart.add(barChartPanel, BorderLayout.CENTER);
-        pnl_pichart.validate();
+//
+//        //create dataset
+//        DefaultPieDataset barDataset = new DefaultPieDataset();
+//        barDataset.setValue("Atomic Habits", Double.valueOf(20));
+//        barDataset.setValue("Shoe Dog", Double.valueOf(30));
+//
+//        //create chart
+//        JFreeChart piechart = ChartFactory.createPieChart("Book sales", barDataset, false, true, false);//explain
+//
+//        PiePlot piePlot = (PiePlot) piechart.getPlot();
+//
+//        //changing pie chart blocks colors
+//        piePlot.setSectionPaint("Atomic Habits", new Color(255, 255, 102));
+//        piePlot.setSectionPaint("Shoe Dog", new Color(102, 255, 102));
+//
+//        piePlot.setBackgroundPaint(new Color(220, 240, 240));
+//
+//        //create chartPanel to display chart(graph)
+//        ChartPanel barChartPanel = new ChartPanel(piechart);
+//        pnl_pichart.removeAll();
+//        pnl_pichart.add(barChartPanel, BorderLayout.CENTER);
+//        pnl_pichart.validate();
     }
 
     public void load_books_from_db() {
-        DefaultTableModel model = (DefaultTableModel)tbl_booklist.getModel();
-        model.setRowCount(0);
-        try {
-            Connection con = new DBConnection().getConnection();
-            Statement st = con.createStatement();
-            ResultSet rs = st.executeQuery("SELECT * FROM book_details ORDER BY name ASC LIMIT 10");
-            while (rs.next()) {
-                String bookName = rs.getString("name");
-                String author = rs.getString("author");
-                String isbn = rs.getString("isbn");
-                int quantity = rs.getInt("quantity");
-                int price = rs.getInt("price");
-                Object[] row = {bookName, author, isbn, price, quantity};
-                model.addRow(row);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+//        DefaultTableModel model = (DefaultTableModel)tbl_booklist.getModel();
+//        model.setRowCount(0);
+//        try {
+//            Connection con = new DBConnection().getConnection();
+//            Statement st = con.createStatement();
+//            ResultSet rs = st.executeQuery("SELECT * FROM book_details ORDER BY name ASC LIMIT 10");
+//            while (rs.next()) {
+//                String bookName = rs.getString("name");
+//                String author = rs.getString("author");
+//                String isbn = rs.getString("isbn");
+//                int quantity = rs.getInt("quantity");
+//                int price = rs.getInt("price");
+//                Object[] row = {bookName, author, isbn, price, quantity};
+//                model.addRow(row);
+//            }
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
     }
 
     /**
@@ -138,7 +138,7 @@ public class HomePage extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         rSLabelImage1 = new rojerusan.RSLabelImage();
         jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        lb_uname = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
@@ -150,8 +150,6 @@ public class HomePage extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         sbp7 = new javax.swing.JPanel();
         sbl7 = new javax.swing.JLabel();
-        sb_dashboard = new javax.swing.JPanel();
-        jLabel11 = new javax.swing.JLabel();
         sbp6 = new javax.swing.JPanel();
         sbl6 = new javax.swing.JLabel();
         sbp5 = new javax.swing.JPanel();
@@ -165,33 +163,10 @@ public class HomePage extends javax.swing.JFrame {
         sbp1 = new javax.swing.JPanel();
         sbl1 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        sb_dashboard = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
         main_view = new javax.swing.JTabbedPane();
-        home_page = new javax.swing.JPanel();
-        jPanel12 = new javax.swing.JPanel();
-        txt_bookcount = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jPanel13 = new javax.swing.JPanel();
-        txt_usercount = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jPanel14 = new javax.swing.JPanel();
-        txt_borrowcount = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
-        jPanel15 = new javax.swing.JPanel();
-        txt_defaultercount = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        tbl_booklist = new rojerusan.RSTableMetro();
-        jLabel22 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
-        pnl_pichart = new javax.swing.JPanel();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        tbl_userlist = new rojerusan.RSTableMetro();
-        manageBooksPanel2 = new booksh.ManageBooksPanel();
-        manageCustomerPanel1 = new booksh.ManageCustomerPanel();
-        manageoders1 = new booksh.Manageoders();
-        viewRecords1 = new booksh.ViewRecords();
-        viewIssuesBooks1 = new booksh.ViewIssuesBooks();
-        viewDefaulters1 = new booksh.ViewDefaulters();
+        display_books1 = new booksh.display_books();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Booksh");
@@ -219,11 +194,11 @@ public class HomePage extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 5, 40));
 
-        jLabel1.setFont(new java.awt.Font("Glass Antiqua", 1, 20)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/adminIcons/male_user_50px.png"))); // NOI18N
-        jLabel1.setText("Admin");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1290, 10, 120, -1));
+        lb_uname.setFont(new java.awt.Font("Glass Antiqua", 1, 20)); // NOI18N
+        lb_uname.setForeground(new java.awt.Color(255, 255, 255));
+        lb_uname.setIcon(new javax.swing.ImageIcon(getClass().getResource("/adminIcons/male_user_50px.png"))); // NOI18N
+        lb_uname.setText("User");
+        jPanel1.add(lb_uname, new org.netbeans.lib.awtextra.AbsoluteConstraints(1290, 10, 120, -1));
 
         jLabel2.setFont(new java.awt.Font("Glass Antiqua", 0, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -311,21 +286,10 @@ public class HomePage extends javax.swing.JFrame {
         sbl7.setFont(new java.awt.Font("Glass Antiqua", 1, 18)); // NOI18N
         sbl7.setForeground(new java.awt.Color(153, 153, 153));
         sbl7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/adminIcons/icons8_Conference_26px.png"))); // NOI18N
-        sbl7.setText("Defaulter List");
+        sbl7.setText("Wishlist");
         sbp7.add(sbl7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, -1, -1));
 
         sidebar.add(sbp7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 540, 300, 60));
-
-        sb_dashboard.setBackground(new java.awt.Color(51, 51, 51));
-        sb_dashboard.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel11.setFont(new java.awt.Font("Glass Antiqua", 1, 18)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(153, 153, 153));
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/adminIcons/icons8_Library_26px_1.png"))); // NOI18N
-        jLabel11.setText("IMS Dashboard");
-        sb_dashboard.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, -1, -1));
-
-        sidebar.add(sb_dashboard, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 300, 60));
 
         sbp6.setBackground(new java.awt.Color(51, 51, 51));
         sbp6.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -388,7 +352,7 @@ public class HomePage extends javax.swing.JFrame {
         sbl4.setFont(new java.awt.Font("Glass Antiqua", 1, 18)); // NOI18N
         sbl4.setForeground(new java.awt.Color(153, 153, 153));
         sbl4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/adminIcons/icons8_Sell_26px.png"))); // NOI18N
-        sbl4.setText("Oders");
+        sbl4.setText("Return Book");
         sbp4.add(sbl4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, -1, -1));
 
         sidebar.add(sbp4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 340, 300, 60));
@@ -410,7 +374,7 @@ public class HomePage extends javax.swing.JFrame {
         sbl3.setFont(new java.awt.Font("Glass Antiqua", 1, 18)); // NOI18N
         sbl3.setForeground(new java.awt.Color(153, 153, 153));
         sbl3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/adminIcons/icons8_Read_Online_26px.png"))); // NOI18N
-        sbl3.setText("Manage Customers");
+        sbl3.setText("Issue Book");
         sbp3.add(sbl3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, -1, -1));
 
         sidebar.add(sbp3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 300, 60));
@@ -432,7 +396,7 @@ public class HomePage extends javax.swing.JFrame {
         sbl2.setFont(new java.awt.Font("Glass Antiqua", 1, 18)); // NOI18N
         sbl2.setForeground(new java.awt.Color(153, 153, 153));
         sbl2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/adminIcons/icons8_Book_26px.png"))); // NOI18N
-        sbl2.setText("Manage Books");
+        sbl2.setText("Profile");
         sbp2.add(sbl2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, -1, -1));
 
         sidebar.add(sbp2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 300, 60));
@@ -454,175 +418,38 @@ public class HomePage extends javax.swing.JFrame {
         sbl1.setFont(new java.awt.Font("Glass Antiqua", 1, 18)); // NOI18N
         sbl1.setForeground(new java.awt.Color(255, 255, 255));
         sbl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/adminIcons/icons8_Home_26px_2.png"))); // NOI18N
-        sbl1.setText("Home Page");
+        sbl1.setText("Books");
         sbp1.add(sbl1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, -1, -1));
 
-        sidebar.add(sbp1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 300, 60));
+        sidebar.add(sbp1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 300, 60));
 
         jLabel5.setFont(new java.awt.Font("Glass Antiqua", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Features");
         sidebar.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, -1, -1));
 
+        sb_dashboard.setBackground(new java.awt.Color(51, 51, 51));
+        sb_dashboard.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel11.setFont(new java.awt.Font("Glass Antiqua", 1, 18)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/adminIcons/icons8_Library_26px_1.png"))); // NOI18N
+        jLabel11.setText("IMS Dashboard");
+        sb_dashboard.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, -1, -1));
+
+        sidebar.add(sb_dashboard, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 300, 60));
+
         getContentPane().add(sidebar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 300, 730));
 
+        main_view.setBackground(new java.awt.Color(220, 240, 240));
         main_view.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 main_viewFocusGained(evt);
             }
         });
+        main_view.addTab("tab1", display_books1);
 
-        home_page.setBackground(new java.awt.Color(220, 240, 240));
-        home_page.setForeground(new java.awt.Color(153, 153, 153));
-        home_page.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jPanel12.setBorder(javax.swing.BorderFactory.createMatteBorder(15, 0, 0, 0, new java.awt.Color(251, 51, 51)));
-        jPanel12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        txt_bookcount.setFont(new java.awt.Font("Glass Antiqua", 1, 50)); // NOI18N
-        txt_bookcount.setForeground(new java.awt.Color(102, 102, 102));
-        txt_bookcount.setIcon(new javax.swing.ImageIcon(getClass().getResource("/adminIcons/icons8_Book_Shelf_50px.png"))); // NOI18N
-        txt_bookcount.setText("152");
-        jPanel12.add(txt_bookcount, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, -1, -1));
-
-        home_page.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 100, 220, 130));
-
-        jLabel15.setFont(new java.awt.Font("Glass Antiqua", 1, 24)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel15.setText("Customer Details");
-        home_page.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, -1, -1));
-
-        jLabel17.setFont(new java.awt.Font("Glass Antiqua", 1, 18)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel17.setText("No Of Customers");
-        home_page.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 60, -1, 20));
-
-        jPanel13.setBorder(javax.swing.BorderFactory.createMatteBorder(15, 0, 0, 0, new java.awt.Color(102, 102, 255)));
-        jPanel13.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        txt_usercount.setFont(new java.awt.Font("Glass Antiqua", 1, 50)); // NOI18N
-        txt_usercount.setForeground(new java.awt.Color(102, 102, 102));
-        txt_usercount.setIcon(new javax.swing.ImageIcon(getClass().getResource("/adminIcons/icons8_People_50px.png"))); // NOI18N
-        txt_usercount.setText("344");
-        jPanel13.add(txt_usercount, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, -1, -1));
-
-        home_page.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 100, 220, 130));
-
-        jLabel18.setFont(new java.awt.Font("Glass Antiqua", 1, 18)); // NOI18N
-        jLabel18.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel18.setText("Lent books");
-        home_page.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 60, -1, 20));
-
-        jPanel14.setBorder(javax.swing.BorderFactory.createMatteBorder(15, 0, 0, 0, new java.awt.Color(251, 51, 51)));
-        jPanel14.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        txt_borrowcount.setFont(new java.awt.Font("Glass Antiqua", 1, 50)); // NOI18N
-        txt_borrowcount.setForeground(new java.awt.Color(102, 102, 102));
-        txt_borrowcount.setIcon(new javax.swing.ImageIcon(getClass().getResource("/adminIcons/icons8_Sell_50px.png"))); // NOI18N
-        txt_borrowcount.setText("81");
-        jPanel14.add(txt_borrowcount, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, -1, -1));
-
-        home_page.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 100, 220, 130));
-
-        jLabel20.setFont(new java.awt.Font("Glass Antiqua", 1, 18)); // NOI18N
-        jLabel20.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel20.setText("Defaulter List");
-        home_page.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 60, -1, 20));
-
-        jPanel15.setBorder(javax.swing.BorderFactory.createMatteBorder(15, 0, 0, 0, new java.awt.Color(102, 102, 255)));
-        jPanel15.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        txt_defaultercount.setFont(new java.awt.Font("Glass Antiqua", 1, 50)); // NOI18N
-        txt_defaultercount.setForeground(new java.awt.Color(102, 102, 102));
-        txt_defaultercount.setIcon(new javax.swing.ImageIcon(getClass().getResource("/adminIcons/icons8_List_of_Thumbnails_50px.png"))); // NOI18N
-        txt_defaultercount.setText("2");
-        jPanel15.add(txt_defaultercount, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, -1, -1));
-
-        home_page.add(jPanel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 100, 220, 130));
-
-        tbl_booklist.setBackground(new java.awt.Color(220, 240, 240));
-        tbl_booklist.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "Name", "Author", "ISBN", "Price", "Quantity"
-            }
-        ));
-        tbl_booklist.setColorBackgoundHead(new java.awt.Color(102, 102, 255));
-        tbl_booklist.setColorBordeFilas(new java.awt.Color(102, 102, 255));
-        tbl_booklist.setColorFilasBackgound1(new java.awt.Color(220, 240, 240));
-        tbl_booklist.setColorFilasBackgound2(new java.awt.Color(220, 240, 240));
-        tbl_booklist.setColorFilasForeground1(new java.awt.Color(102, 102, 102));
-        tbl_booklist.setColorFilasForeground2(new java.awt.Color(102, 102, 102));
-        tbl_booklist.setColorSelBackgound(new java.awt.Color(102, 102, 102));
-        tbl_booklist.setColorSelForeground(new java.awt.Color(220, 240, 240));
-        tbl_booklist.setFont(new java.awt.Font("Glass Antiqua", 0, 25)); // NOI18N
-        tbl_booklist.setFuenteFilas(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        tbl_booklist.setFuenteFilasSelect(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
-        tbl_booklist.setFuenteHead(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
-        tbl_booklist.setRowHeight(40);
-        jScrollPane2.setViewportView(tbl_booklist);
-
-        home_page.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 550, 670, 130));
-
-        jLabel22.setFont(new java.awt.Font("Glass Antiqua", 1, 18)); // NOI18N
-        jLabel22.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel22.setText("No Of Books");
-        home_page.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 60, -1, -1));
-
-        jLabel23.setFont(new java.awt.Font("Glass Antiqua", 1, 24)); // NOI18N
-        jLabel23.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel23.setText("Book Details");
-        home_page.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 500, -1, -1));
-
-        pnl_pichart.setLayout(new java.awt.BorderLayout());
-        home_page.add(pnl_pichart, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 300, 420, 400));
-
-        tbl_userlist.setBackground(new java.awt.Color(220, 240, 240));
-        tbl_userlist.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {"shadman", "shadman@gamial.com", "2", "1"},
-                {"adil", "adil@yahoo.com", "4", "2"}
-            },
-            new String [] {
-                "Name", "Email", "Oders", "Issued Books"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        tbl_userlist.setColorBackgoundHead(new java.awt.Color(102, 102, 255));
-        tbl_userlist.setColorBordeFilas(new java.awt.Color(102, 102, 255));
-        tbl_userlist.setColorFilasBackgound1(new java.awt.Color(220, 240, 240));
-        tbl_userlist.setColorFilasBackgound2(new java.awt.Color(220, 240, 240));
-        tbl_userlist.setColorFilasForeground1(new java.awt.Color(102, 102, 102));
-        tbl_userlist.setColorFilasForeground2(new java.awt.Color(102, 102, 102));
-        tbl_userlist.setColorSelBackgound(new java.awt.Color(102, 102, 102));
-        tbl_userlist.setColorSelForeground(new java.awt.Color(220, 240, 240));
-        tbl_userlist.setFont(new java.awt.Font("Glass Antiqua", 0, 25)); // NOI18N
-        tbl_userlist.setFuenteFilas(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        tbl_userlist.setFuenteFilasSelect(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
-        tbl_userlist.setFuenteHead(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
-        tbl_userlist.setRowHeight(40);
-        jScrollPane4.setViewportView(tbl_userlist);
-
-        home_page.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 320, 670, 130));
-
-        main_view.addTab("tab1", home_page);
-        main_view.addTab("tab8", manageBooksPanel2);
-        main_view.addTab("tab3", manageCustomerPanel1);
-        main_view.addTab("tab4", manageoders1);
-        main_view.addTab("tab5", viewRecords1);
-        main_view.addTab("tab6", viewIssuesBooks1);
-        main_view.addTab("tab7", viewDefaulters1);
-
-        getContentPane().add(main_view, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 20, 1200, 780));
+        getContentPane().add(main_view, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 40, 1200, 760));
 
         setSize(new java.awt.Dimension(1500, 800));
         setLocationRelativeTo(null);
@@ -787,36 +614,30 @@ public class HomePage extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(HomePage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(UserHome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(HomePage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(UserHome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(HomePage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(UserHome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(HomePage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(UserHome.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new HomePage().setVisible(true);
+                new UserHome().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel home_page;
-    private javax.swing.JLabel jLabel1;
+    private booksh.display_books display_books1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
@@ -825,18 +646,9 @@ public class HomePage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel11;
-    private javax.swing.JPanel jPanel12;
-    private javax.swing.JPanel jPanel13;
-    private javax.swing.JPanel jPanel14;
-    private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JLabel lb_uname;
     private javax.swing.JTabbedPane main_view;
-    private booksh.ManageBooksPanel manageBooksPanel2;
-    private booksh.ManageCustomerPanel manageCustomerPanel1;
-    private booksh.Manageoders manageoders1;
-    private javax.swing.JPanel pnl_pichart;
     private rojerusan.RSLabelImage rSLabelImage1;
     private javax.swing.JPanel sb_dashboard;
     private javax.swing.JLabel sbl1;
@@ -854,14 +666,5 @@ public class HomePage extends javax.swing.JFrame {
     private javax.swing.JPanel sbp6;
     private javax.swing.JPanel sbp7;
     private javax.swing.JPanel sidebar;
-    private rojerusan.RSTableMetro tbl_booklist;
-    private rojerusan.RSTableMetro tbl_userlist;
-    private javax.swing.JLabel txt_bookcount;
-    private javax.swing.JLabel txt_borrowcount;
-    private javax.swing.JLabel txt_defaultercount;
-    private javax.swing.JLabel txt_usercount;
-    private booksh.ViewDefaulters viewDefaulters1;
-    private booksh.ViewIssuesBooks viewIssuesBooks1;
-    private booksh.ViewRecords viewRecords1;
     // End of variables declaration//GEN-END:variables
 }

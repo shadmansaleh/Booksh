@@ -4,10 +4,13 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/home/shadman/projects/NetBeansProjects/Booksh/src/booksh/ManageBooksPanel.java</file>
+            <file>file:/home/shadman/projects/NetBeansProjects/Booksh/src/booksh/book_rect_view.java</file>
             <file>file:/home/shadman/projects/NetBeansProjects/Booksh/src/booksh/LoginPage.java</file>
             <file>file:/home/shadman/projects/NetBeansProjects/Booksh/src/booksh/HomePage.java</file>
             <file>file:/home/shadman/projects/NetBeansProjects/Booksh/src/booksh/Globals.java</file>
+            <file>file:/home/shadman/projects/NetBeansProjects/Booksh/src/booksh/display_books.java</file>
             <file>file:/home/shadman/projects/NetBeansProjects/Booksh/src/booksh/Cl.java</file>
+            <file>file:/home/shadman/projects/NetBeansProjects/Booksh/src/booksh/UserHome.java</file>
         </group>
     </open-files>
 </project-private>

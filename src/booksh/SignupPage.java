@@ -138,7 +138,7 @@ public class SignupPage extends javax.swing.JFrame {
         txt_contact.setBackground(new java.awt.Color(51, 102, 255));
         txt_contact.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
         txt_contact.setForeground(new java.awt.Color(255, 255, 255));
-        txt_contact.setFont(new java.awt.Font("Glass Antiqua", 0, 17)); // NOI18N
+        txt_contact.setFont(new java.awt.Font("Glass Antiqua", 0, 20)); // NOI18N
         txt_contact.setPhColor(new java.awt.Color(51, 102, 255));
         txt_contact.setPlaceholder("Enter Username");
         txt_contact.addActionListener(new java.awt.event.ActionListener() {
@@ -151,7 +151,7 @@ public class SignupPage extends javax.swing.JFrame {
         txt_username.setBackground(new java.awt.Color(51, 102, 255));
         txt_username.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
         txt_username.setForeground(new java.awt.Color(255, 255, 255));
-        txt_username.setFont(new java.awt.Font("Glass Antiqua", 0, 17)); // NOI18N
+        txt_username.setFont(new java.awt.Font("Glass Antiqua", 0, 20)); // NOI18N
         txt_username.setPhColor(new java.awt.Color(51, 102, 255));
         txt_username.setPlaceholder("Enter Username");
         txt_username.addActionListener(new java.awt.event.ActionListener() {
@@ -164,7 +164,7 @@ public class SignupPage extends javax.swing.JFrame {
         txt_email.setBackground(new java.awt.Color(51, 102, 255));
         txt_email.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
         txt_email.setForeground(new java.awt.Color(255, 255, 255));
-        txt_email.setFont(new java.awt.Font("Glass Antiqua", 0, 17)); // NOI18N
+        txt_email.setFont(new java.awt.Font("Glass Antiqua", 0, 20)); // NOI18N
         txt_email.setPhColor(new java.awt.Color(51, 102, 255));
         txt_email.setPlaceholder("Enter Username");
         txt_email.addActionListener(new java.awt.event.ActionListener() {
@@ -232,7 +232,7 @@ public class SignupPage extends javax.swing.JFrame {
         jPanel1.add(btn_signup, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 660, 320, 70));
 
         txt_password.setBackground(new java.awt.Color(51, 102, 255));
-        txt_password.setFont(new java.awt.Font("Glass Antiqua", 0, 17)); // NOI18N
+        txt_password.setFont(new java.awt.Font("Glass Antiqua", 0, 20)); // NOI18N
         txt_password.setForeground(new java.awt.Color(255, 255, 255));
         txt_password.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
         jPanel1.add(txt_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, 240, 40));

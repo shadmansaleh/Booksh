@@ -251,7 +251,7 @@ public class ManageBooksPanel extends javax.swing.JPanel {
         jScrollPane2 = new javax.swing.JScrollPane();
         tbl_booklist = new rojerusan.RSTableMetro();
 
-        setBackground(new java.awt.Color(220, 240, 240));
+        setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(1200, 760));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -501,7 +501,6 @@ public class ManageBooksPanel extends javax.swing.JPanel {
         jLabel11.setText("Manage Books");
         add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 10, 270, 90));
 
-        tbl_booklist.setBackground(new java.awt.Color(220, 240, 240));
         tbl_booklist.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -512,12 +511,10 @@ public class ManageBooksPanel extends javax.swing.JPanel {
         ));
         tbl_booklist.setColorBackgoundHead(new java.awt.Color(102, 102, 255));
         tbl_booklist.setColorBordeFilas(new java.awt.Color(102, 102, 255));
-        tbl_booklist.setColorFilasBackgound1(new java.awt.Color(220, 240, 240));
-        tbl_booklist.setColorFilasBackgound2(new java.awt.Color(220, 240, 240));
+        tbl_booklist.setColorFilasBackgound2(new java.awt.Color(255, 255, 255));
         tbl_booklist.setColorFilasForeground1(new java.awt.Color(102, 102, 102));
         tbl_booklist.setColorFilasForeground2(new java.awt.Color(102, 102, 102));
         tbl_booklist.setColorSelBackgound(new java.awt.Color(102, 102, 102));
-        tbl_booklist.setColorSelForeground(new java.awt.Color(220, 240, 240));
         tbl_booklist.setFont(new java.awt.Font("Glass Antiqua", 0, 25)); // NOI18N
         tbl_booklist.setFuenteFilas(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         tbl_booklist.setFuenteFilasSelect(new java.awt.Font("Tahoma", 1, 20)); // NOI18N

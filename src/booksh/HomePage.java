@@ -96,7 +96,7 @@ public class HomePage extends javax.swing.JFrame {
         piePlot.setSectionPaint("Atomic Habits", new Color(255, 255, 102));
         piePlot.setSectionPaint("Shoe Dog", new Color(102, 255, 102));
 
-        piePlot.setBackgroundPaint(new Color(220, 240, 240));
+        piePlot.setBackgroundPaint(new Color(255,255,255));
 
         //create chartPanel to display chart(graph)
         ChartPanel barChartPanel = new ChartPanel(piechart);
@@ -472,7 +472,7 @@ public class HomePage extends javax.swing.JFrame {
             }
         });
 
-        home_page.setBackground(new java.awt.Color(220, 240, 240));
+        home_page.setBackground(new java.awt.Color(255, 255, 255));
         home_page.setForeground(new java.awt.Color(153, 153, 153));
         home_page.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -540,7 +540,6 @@ public class HomePage extends javax.swing.JFrame {
 
         home_page.add(jPanel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 100, 220, 130));
 
-        tbl_booklist.setBackground(new java.awt.Color(220, 240, 240));
         tbl_booklist.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -551,12 +550,10 @@ public class HomePage extends javax.swing.JFrame {
         ));
         tbl_booklist.setColorBackgoundHead(new java.awt.Color(102, 102, 255));
         tbl_booklist.setColorBordeFilas(new java.awt.Color(102, 102, 255));
-        tbl_booklist.setColorFilasBackgound1(new java.awt.Color(220, 240, 240));
-        tbl_booklist.setColorFilasBackgound2(new java.awt.Color(220, 240, 240));
+        tbl_booklist.setColorFilasBackgound2(new java.awt.Color(255, 255, 255));
         tbl_booklist.setColorFilasForeground1(new java.awt.Color(102, 102, 102));
         tbl_booklist.setColorFilasForeground2(new java.awt.Color(102, 102, 102));
         tbl_booklist.setColorSelBackgound(new java.awt.Color(102, 102, 102));
-        tbl_booklist.setColorSelForeground(new java.awt.Color(220, 240, 240));
         tbl_booklist.setFont(new java.awt.Font("Glass Antiqua", 0, 25)); // NOI18N
         tbl_booklist.setFuenteFilas(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         tbl_booklist.setFuenteFilasSelect(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
@@ -579,7 +576,6 @@ public class HomePage extends javax.swing.JFrame {
         pnl_pichart.setLayout(new java.awt.BorderLayout());
         home_page.add(pnl_pichart, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 300, 420, 400));
 
-        tbl_userlist.setBackground(new java.awt.Color(220, 240, 240));
         tbl_userlist.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"shadman", "shadman@gamial.com", "2", "1"},
@@ -599,12 +595,10 @@ public class HomePage extends javax.swing.JFrame {
         });
         tbl_userlist.setColorBackgoundHead(new java.awt.Color(102, 102, 255));
         tbl_userlist.setColorBordeFilas(new java.awt.Color(102, 102, 255));
-        tbl_userlist.setColorFilasBackgound1(new java.awt.Color(220, 240, 240));
-        tbl_userlist.setColorFilasBackgound2(new java.awt.Color(220, 240, 240));
+        tbl_userlist.setColorFilasBackgound2(new java.awt.Color(255, 255, 255));
         tbl_userlist.setColorFilasForeground1(new java.awt.Color(102, 102, 102));
         tbl_userlist.setColorFilasForeground2(new java.awt.Color(102, 102, 102));
         tbl_userlist.setColorSelBackgound(new java.awt.Color(102, 102, 102));
-        tbl_userlist.setColorSelForeground(new java.awt.Color(220, 240, 240));
         tbl_userlist.setFont(new java.awt.Font("Glass Antiqua", 0, 25)); // NOI18N
         tbl_userlist.setFuenteFilas(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         tbl_userlist.setFuenteFilasSelect(new java.awt.Font("Tahoma", 1, 20)); // NOI18N

@@ -441,7 +441,7 @@ public class UserHome extends javax.swing.JFrame {
 
         getContentPane().add(sidebar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 300, 730));
 
-        main_view.setBackground(new java.awt.Color(220, 240, 240));
+        main_view.setBackground(new java.awt.Color(255, 255, 255));
         main_view.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 main_viewFocusGained(evt);

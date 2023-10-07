@@ -50,20 +50,20 @@ public class book_rect_view extends javax.swing.JPanel {
         ic_boroow = new rojerusan.RSLabelImage();
         ic_buy = new rojerusan.RSLabelImage();
         ic_wishlist = new rojerusan.RSLabelImage();
+        rSLabelImage1 = new rojerusan.RSLabelImage();
 
-        setBackground(new java.awt.Color(151, 151, 251));
-        setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 4, 0, new java.awt.Color(251, 51, 51)));
+        setBackground(new java.awt.Color(255, 255, 255));
         setForeground(new java.awt.Color(51, 51, 51));
         setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
-        setMinimumSize(new java.awt.Dimension(280, 400));
-        setPreferredSize(new java.awt.Dimension(280, 400));
+        setMinimumSize(new java.awt.Dimension(280, 420));
+        setPreferredSize(new java.awt.Dimension(280, 420));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lb_bookname.setFont(new java.awt.Font("Glass Antiqua", 1, 36)); // NOI18N
         lb_bookname.setForeground(new java.awt.Color(51, 51, 51));
         lb_bookname.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lb_bookname.setText("Book Name");
-        add(lb_bookname, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 230, 50));
+        add(lb_bookname, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 230, 50));
 
         lb_author.setFont(new java.awt.Font("Glass Antiqua", 2, 24)); // NOI18N
         lb_author.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
@@ -71,64 +71,80 @@ public class book_rect_view extends javax.swing.JPanel {
         add(lb_author, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, 210, 60));
 
         jLabel3.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(251, 251, 251));
         jLabel3.setText("Genre");
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 50, 30));
 
         lb_genre.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
+        lb_genre.setForeground(new java.awt.Color(255, 255, 255));
+        lb_genre.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lb_genre.setText("Thriller");
-        add(lb_genre, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 130, -1, 20));
+        add(lb_genre, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 130, 110, 20));
 
         lb_year.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
+        lb_year.setForeground(new java.awt.Color(251, 251, 251));
+        lb_year.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lb_year.setText("2017");
-        add(lb_year, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 180, -1, 20));
+        add(lb_year, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 180, 110, 20));
 
         jLabel5.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(251, 251, 251));
         jLabel5.setText("Published");
         add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 90, 30));
 
         lb_rating.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
+        lb_rating.setForeground(new java.awt.Color(251, 251, 251));
+        lb_rating.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lb_rating.setText("4.2");
-        add(lb_rating, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 230, -1, 20));
+        add(lb_rating, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 230, 120, 20));
 
+        lb_price.setBackground(new java.awt.Color(255, 255, 255));
         lb_price.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        lb_price.setForeground(new java.awt.Color(251, 251, 251));
+        lb_price.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lb_price.setText("250");
-        add(lb_price, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 270, -1, 30));
+        add(lb_price, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 280, 120, 30));
 
         jLabel6.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(251, 251, 251));
         jLabel6.setText("Price");
         add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 50, 30));
 
         jLabel7.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(251, 251, 251));
         jLabel7.setText("Rating");
         add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, 50, 30));
 
-        ic_boroow.setIcon(new javax.swing.ImageIcon(getClass().getResource("/adminIcons/icons8_Sell_50px.png"))); // NOI18N
+        ic_boroow.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_Sell_white_50px.png"))); // NOI18N
         ic_boroow.setToolTipText("Borrow");
         ic_boroow.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ic_boroowMouseClicked(evt);
             }
         });
-        add(ic_boroow, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 50, 40));
+        add(ic_boroow, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, 50, 40));
 
-        ic_buy.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-buy-50.png"))); // NOI18N
+        ic_buy.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-buy-white-50.png"))); // NOI18N
         ic_buy.setToolTipText("Buy");
         ic_buy.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ic_buyMouseClicked(evt);
             }
         });
-        add(ic_buy, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 340, 50, 40));
+        add(ic_buy, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 360, 50, 40));
 
         ic_wishlist.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        ic_wishlist.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-love-50.png"))); // NOI18N
+        ic_wishlist.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-love-(white)-50.png"))); // NOI18N
         ic_wishlist.setToolTipText("Add to Wishlist");
         ic_wishlist.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ic_wishlistMouseClicked(evt);
             }
         });
-        add(ic_wishlist, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 340, 50, 40));
+        add(ic_wishlist, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 360, 50, 40));
+
+        rSLabelImage1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/book_cover(default).png"))); // NOI18N
+        add(rSLabelImage1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 280, 420));
     }// </editor-fold>//GEN-END:initComponents
 
     private void ic_boroowMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ic_boroowMouseClicked
@@ -161,5 +177,6 @@ public class book_rect_view extends javax.swing.JPanel {
     private javax.swing.JLabel lb_price;
     private javax.swing.JLabel lb_rating;
     private javax.swing.JLabel lb_year;
+    private rojerusan.RSLabelImage rSLabelImage1;
     // End of variables declaration//GEN-END:variables
 }

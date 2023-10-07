@@ -19,7 +19,7 @@ public class BookView extends javax.swing.JPanel {
      */
     ArrayList<Book> books;
     int rows = 0;
-    static final Rectangle pnl = new Rectangle(280, 400);
+    static final Rectangle pnl = new Rectangle(280, 420);
 
     public BookView(ArrayList<Book> books) {
         initComponents();
@@ -42,7 +42,7 @@ public class BookView extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setBackground(new java.awt.Color(220, 240, 240));
+        setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new java.awt.BorderLayout());
     }// </editor-fold>//GEN-END:initComponents
 

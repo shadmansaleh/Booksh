@@ -35,7 +35,6 @@ public class FAQ extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -65,36 +64,19 @@ public class FAQ extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel4.setBackground(new java.awt.Color(51, 51, 255));
+        jPanel4.setBackground(new java.awt.Color(102, 102, 255));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel9.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(63, 25, -1, -1));
 
-        jLabel10.setFont(new java.awt.Font("ITF Devanagari Marathi", 1, 18)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(0, 0, 255));
+        jLabel10.setFont(new java.awt.Font("ITF Devanagari Marathi", 1, 32)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("FAQ");
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addComponent(jLabel10)
-                .addContainerGap(62, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(39, 39, 39)
-                .addComponent(jLabel10)
-                .addContainerGap(44, Short.MAX_VALUE))
-        );
-
-        jPanel4.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 6, -1, -1));
+        jPanel4.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, -1, -1));
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-close-50.png"))); // NOI18N
         jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -102,44 +84,48 @@ public class FAQ extends javax.swing.JFrame {
                 jLabel11MouseClicked(evt);
             }
         });
-        jPanel4.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 10, -1, -1));
+        jPanel4.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 10, -1, -1));
 
-        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 870, 110));
+        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 800, 100));
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel1.setFont(new java.awt.Font("Glass Antiqua", 0, 20)); // NOI18N
         jLabel1.setText("3. Can I check out and return books using the LMS?");
-        jLabel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 340, 320, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 350, 320, -1));
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel2.setFont(new java.awt.Font("Glass Antiqua", 0, 20)); // NOI18N
         jLabel2.setText("1. What is a Library Management System?  ");
-        jLabel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 150, -1, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 160, -1, -1));
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel3.setFont(new java.awt.Font("Glass Antiqua", 0, 20)); // NOI18N
         jLabel3.setText("4. Why do libraries need an LMS?");
-        jLabel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 430, 260, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 440, 260, -1));
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel4.setFont(new java.awt.Font("Glass Antiqua", 0, 20)); // NOI18N
         jLabel4.setText("2.What are the key features of an LMS?");
-        jLabel4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 250, 260, -1));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, 260, -1));
 
+        jLabel5.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel5.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
         jLabel5.setText("It automates various tasks, making library management more efficient.");
-        jLabel5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 460, 650, 50));
 
+        jLabel6.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel6.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
         jLabel6.setText("A Library Management System (LMS) is software designed to help libraries efficiently manage their operations.");
-        jLabel6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, 650, 60));
 
+        jLabel7.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel7.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
         jLabel7.setText("Cataloging, circulation management, patron management, reporting, search capabilities, and online access to resources.");
-        jLabel7.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 280, 650, 50));
 
+        jLabel8.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel8.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
         jLabel8.setText("Yes, LMS allows patrons to check out and return library items.");
-        jLabel8.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 370, 650, 50));
 
         jButton1.setText("Okay");
@@ -211,7 +197,6 @@ public class FAQ extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JMenuBar jMenuBar3;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
     // End of variables declaration//GEN-END:variables
 }

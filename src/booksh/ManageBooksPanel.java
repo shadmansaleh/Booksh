@@ -246,6 +246,7 @@ public class ManageBooksPanel extends javax.swing.JPanel {
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         txt_bookdescription = new javax.swing.JTextField();
+        btn_clear = new rojerusan.RSMaterialButtonCircle();
         jLabel11 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tbl_booklist = new rojerusan.RSTableMetro();
@@ -483,6 +484,15 @@ public class ManageBooksPanel extends javax.swing.JPanel {
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 350, 660));
 
+        btn_clear.setBackground(new java.awt.Color(250, 51, 51));
+        btn_clear.setText("Clear");
+        btn_clear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_clearActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btn_clear, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 710, -1, 40));
+
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 350, 750));
 
         jLabel11.setFont(new java.awt.Font("Glass Antiqua", 1, 36)); // NOI18N
@@ -600,9 +610,23 @@ public class ManageBooksPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_bookquantityActionPerformed
 
+    private void btn_clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_clearActionPerformed
+        // TODO add your handling code here:
+        txt_bookname.setText("");
+        txt_bookauthor.setText("");
+        txt_bookid.setText("");
+        txt_bookprice.setText("");
+        txt_bookquantity.setText("");
+        txt_bookgenre.setText("");
+        txt_bookrating.setText("");
+        txt_bookyear.setText("");
+        txt_bookdescription.setText("");
+    }//GEN-LAST:event_btn_clearActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private rojerusan.RSMaterialButtonCircle btn_add;
+    private rojerusan.RSMaterialButtonCircle btn_clear;
     private rojerusan.RSMaterialButtonCircle btn_modify;
     private rojerusan.RSMaterialButtonCircle btn_remove;
     private javax.swing.JLabel jLabel1;

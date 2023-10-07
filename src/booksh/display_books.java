@@ -33,6 +33,7 @@ public class display_books extends javax.swing.JPanel {
 
     public void set_genre_combo() {
         cmb_genre.removeAll();
+        cmb_genre.addItem("");
         try {
             Connection con = DBConnection.getConnection();
             Statement st = con.createStatement();
@@ -60,7 +61,7 @@ public class display_books extends javax.swing.JPanel {
 
         try {
             Connection con = DBConnection.getConnection();
-            String query = "SELECT * FROM book_details WHERE name LIKE ? AND author LIKE ? AND genre LIKE ? AND price BETWEEN ? AND ? AND rating BETWEEN ? AND ? AND year BETWEEN ? AND ?";
+            String query = "SELECT * FROM book_details WHERE name LIKE ? AND author LIKE ? AND genre LIKE ? AND price BETWEEN ? AND ? AND rating BETWEEN ? AND ? AND year BETWEEN ? AND ? ORDER BY name ASC";
             var st = con.prepareStatement(query);
             st.setString(1, name.equals("") ? "%" : "%"+name+"%");
             st.setString(2, author.equals("") ? "%" : "%"+author+"%");

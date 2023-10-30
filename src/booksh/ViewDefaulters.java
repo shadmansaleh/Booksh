@@ -26,30 +26,56 @@ public class ViewDefaulters extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tbl_booklist = new rojerusan.RSTableMetro();
+        jLabel11 = new javax.swing.JLabel();
 
-        jLabel1.setText("Todo view defaulter");
+        setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(417, 417, 417)
-                .addComponent(jLabel1)
-                .addContainerGap(646, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(180, 180, 180)
-                .addComponent(jLabel1)
-                .addContainerGap(550, Short.MAX_VALUE))
-        );
+        tbl_booklist.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"user1", "Book_a", "20/02/23", "50 /-"},
+                {"user1", "Book_b", "12/03/22", "50 /-"}
+            },
+            new String [] {
+                "Name", "BookName", "DueDate", "Fined"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        tbl_booklist.setColorBackgoundHead(new java.awt.Color(251, 102, 102));
+        tbl_booklist.setColorBordeFilas(new java.awt.Color(251, 102, 102));
+        tbl_booklist.setColorFilasBackgound2(new java.awt.Color(255, 255, 255));
+        tbl_booklist.setColorFilasForeground1(new java.awt.Color(102, 102, 102));
+        tbl_booklist.setColorFilasForeground2(new java.awt.Color(102, 102, 102));
+        tbl_booklist.setColorSelBackgound(new java.awt.Color(102, 102, 102));
+        tbl_booklist.setFont(new java.awt.Font("Glass Antiqua", 0, 25)); // NOI18N
+        tbl_booklist.setFuenteFilas(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        tbl_booklist.setFuenteFilasSelect(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        tbl_booklist.setFuenteHead(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        tbl_booklist.setRowHeight(40);
+        jScrollPane2.setViewportView(tbl_booklist);
+
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 1210, 640));
+
+        jLabel11.setFont(new java.awt.Font("Glass Antiqua", 1, 36)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(251, 51, 51));
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AddNewBookIcons/icons8_Book_50px_1.png"))); // NOI18N
+        jLabel11.setText("Defaulters");
+        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 10, 210, 90));
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JScrollPane jScrollPane2;
+    private rojerusan.RSTableMetro tbl_booklist;
     // End of variables declaration//GEN-END:variables
 }

@@ -255,7 +255,7 @@ public class ManageBooksPanel extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(1200, 760));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(102, 102, 255));
+        jPanel1.setBackground(new java.awt.Color(51, 102, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btn_remove.setBackground(new java.awt.Color(250, 51, 51));
@@ -288,20 +288,22 @@ public class ManageBooksPanel extends javax.swing.JPanel {
         jScrollPane1.setBackground(new java.awt.Color(102, 102, 255));
         jScrollPane1.setBorder(null);
 
-        jPanel2.setBackground(new java.awt.Color(102, 102, 255));
+        jPanel2.setBackground(new java.awt.Color(51, 102, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel1.setBackground(new java.awt.Color(51, 102, 255));
         jLabel1.setFont(new java.awt.Font("Glass Antiqua", 0, 20)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("ISBN");
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
 
+        jLabel2.setBackground(new java.awt.Color(51, 102, 255));
         jLabel2.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AddNewBookIcons/icons8_Moleskine_26px.png"))); // NOI18N
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
 
-        txt_bookid.setBackground(new java.awt.Color(102, 102, 255));
+        txt_bookid.setBackground(new java.awt.Color(51, 102, 255));
         txt_bookid.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
         txt_bookid.setForeground(new java.awt.Color(255, 255, 255));
         txt_bookid.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
@@ -312,17 +314,19 @@ public class ManageBooksPanel extends javax.swing.JPanel {
         });
         jPanel2.add(txt_bookid, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 80, 230, 30));
 
+        jLabel3.setBackground(new java.awt.Color(51, 102, 255));
         jLabel3.setFont(new java.awt.Font("Glass Antiqua", 0, 20)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Name");
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, -1));
 
+        jLabel4.setBackground(new java.awt.Color(51, 102, 255));
         jLabel4.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AddNewBookIcons/icons8_Moleskine_26px.png"))); // NOI18N
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, -1, -1));
 
-        txt_bookname.setBackground(new java.awt.Color(102, 102, 255));
+        txt_bookname.setBackground(new java.awt.Color(51, 102, 255));
         txt_bookname.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
         txt_bookname.setForeground(new java.awt.Color(255, 255, 255));
         txt_bookname.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
@@ -333,17 +337,19 @@ public class ManageBooksPanel extends javax.swing.JPanel {
         });
         jPanel2.add(txt_bookname, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, 230, 30));
 
+        jLabel6.setBackground(new java.awt.Color(51, 102, 255));
         jLabel6.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AddNewBookIcons/icons8_Moleskine_26px.png"))); // NOI18N
         jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, -1, -1));
 
+        jLabel5.setBackground(new java.awt.Color(51, 102, 255));
         jLabel5.setFont(new java.awt.Font("Glass Antiqua", 0, 20)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Author");
         jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, -1, -1));
 
-        txt_bookauthor.setBackground(new java.awt.Color(102, 102, 255));
+        txt_bookauthor.setBackground(new java.awt.Color(51, 102, 255));
         txt_bookauthor.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
         txt_bookauthor.setForeground(new java.awt.Color(255, 255, 255));
         txt_bookauthor.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
@@ -354,17 +360,19 @@ public class ManageBooksPanel extends javax.swing.JPanel {
         });
         jPanel2.add(txt_bookauthor, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 260, 230, 30));
 
+        jLabel8.setBackground(new java.awt.Color(51, 102, 255));
         jLabel8.setFont(new java.awt.Font("Glass Antiqua", 0, 20)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Price");
         jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, -1, -1));
 
+        jLabel7.setBackground(new java.awt.Color(51, 102, 255));
         jLabel7.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AddNewBookIcons/icons8_Moleskine_26px.png"))); // NOI18N
         jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, -1, -1));
 
-        txt_bookprice.setBackground(new java.awt.Color(102, 102, 255));
+        txt_bookprice.setBackground(new java.awt.Color(51, 102, 255));
         txt_bookprice.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
         txt_bookprice.setForeground(new java.awt.Color(255, 255, 255));
         txt_bookprice.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
@@ -375,17 +383,19 @@ public class ManageBooksPanel extends javax.swing.JPanel {
         });
         jPanel2.add(txt_bookprice, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 350, 230, 30));
 
+        jLabel14.setBackground(new java.awt.Color(51, 102, 255));
         jLabel14.setFont(new java.awt.Font("Glass Antiqua", 0, 20)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setText("Quantity");
         jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, -1, -1));
 
+        jLabel15.setBackground(new java.awt.Color(51, 102, 255));
         jLabel15.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AddNewBookIcons/icons8_Moleskine_26px.png"))); // NOI18N
         jPanel2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 440, -1, -1));
 
-        txt_bookquantity.setBackground(new java.awt.Color(102, 102, 255));
+        txt_bookquantity.setBackground(new java.awt.Color(51, 102, 255));
         txt_bookquantity.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
         txt_bookquantity.setForeground(new java.awt.Color(255, 255, 255));
         txt_bookquantity.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
@@ -396,17 +406,19 @@ public class ManageBooksPanel extends javax.swing.JPanel {
         });
         jPanel2.add(txt_bookquantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 440, 230, 30));
 
+        jLabel9.setBackground(new java.awt.Color(51, 102, 255));
         jLabel9.setFont(new java.awt.Font("Glass Antiqua", 0, 20)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Genre");
         jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, -1, -1));
 
+        jLabel10.setBackground(new java.awt.Color(51, 102, 255));
         jLabel10.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AddNewBookIcons/icons8_Moleskine_26px.png"))); // NOI18N
         jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 530, -1, -1));
 
-        txt_bookgenre.setBackground(new java.awt.Color(102, 102, 255));
+        txt_bookgenre.setBackground(new java.awt.Color(51, 102, 255));
         txt_bookgenre.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
         txt_bookgenre.setForeground(new java.awt.Color(255, 255, 255));
         txt_bookgenre.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
@@ -417,17 +429,19 @@ public class ManageBooksPanel extends javax.swing.JPanel {
         });
         jPanel2.add(txt_bookgenre, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 530, 230, 30));
 
+        jLabel12.setBackground(new java.awt.Color(51, 102, 255));
         jLabel12.setFont(new java.awt.Font("Glass Antiqua", 0, 20)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("Rating");
         jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 580, -1, -1));
 
+        jLabel13.setBackground(new java.awt.Color(51, 102, 255));
         jLabel13.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AddNewBookIcons/icons8_Moleskine_26px.png"))); // NOI18N
         jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 620, -1, -1));
 
-        txt_bookrating.setBackground(new java.awt.Color(102, 102, 255));
+        txt_bookrating.setBackground(new java.awt.Color(51, 102, 255));
         txt_bookrating.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
         txt_bookrating.setForeground(new java.awt.Color(255, 255, 255));
         txt_bookrating.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
@@ -438,17 +452,19 @@ public class ManageBooksPanel extends javax.swing.JPanel {
         });
         jPanel2.add(txt_bookrating, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 620, 230, 30));
 
+        jLabel16.setBackground(new java.awt.Color(51, 102, 255));
         jLabel16.setFont(new java.awt.Font("Glass Antiqua", 0, 20)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setText("Published");
         jPanel2.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 670, -1, -1));
 
+        jLabel17.setBackground(new java.awt.Color(51, 102, 255));
         jLabel17.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AddNewBookIcons/icons8_Moleskine_26px.png"))); // NOI18N
         jPanel2.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 710, -1, -1));
 
-        txt_bookyear.setBackground(new java.awt.Color(102, 102, 255));
+        txt_bookyear.setBackground(new java.awt.Color(51, 102, 255));
         txt_bookyear.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
         txt_bookyear.setForeground(new java.awt.Color(255, 255, 255));
         txt_bookyear.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
@@ -459,17 +475,19 @@ public class ManageBooksPanel extends javax.swing.JPanel {
         });
         jPanel2.add(txt_bookyear, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 710, 230, 30));
 
+        jLabel18.setBackground(new java.awt.Color(51, 102, 255));
         jLabel18.setFont(new java.awt.Font("Glass Antiqua", 0, 20)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(255, 255, 255));
         jLabel18.setText("Description");
         jPanel2.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 770, -1, -1));
 
+        jLabel19.setBackground(new java.awt.Color(51, 102, 255));
         jLabel19.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(255, 255, 255));
         jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AddNewBookIcons/icons8_Moleskine_26px.png"))); // NOI18N
         jPanel2.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 810, -1, -1));
 
-        txt_bookdescription.setBackground(new java.awt.Color(102, 102, 255));
+        txt_bookdescription.setBackground(new java.awt.Color(51, 102, 255));
         txt_bookdescription.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
         txt_bookdescription.setForeground(new java.awt.Color(255, 255, 255));
         txt_bookdescription.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
@@ -509,8 +527,8 @@ public class ManageBooksPanel extends javax.swing.JPanel {
                 "Name", "Author", "ISBN", "Price", "Quantity"
             }
         ));
-        tbl_booklist.setColorBackgoundHead(new java.awt.Color(102, 102, 255));
-        tbl_booklist.setColorBordeFilas(new java.awt.Color(102, 102, 255));
+        tbl_booklist.setColorBackgoundHead(new java.awt.Color(51, 102, 255));
+        tbl_booklist.setColorBordeFilas(new java.awt.Color(51, 102, 255));
         tbl_booklist.setColorFilasBackgound2(new java.awt.Color(255, 255, 255));
         tbl_booklist.setColorFilasForeground1(new java.awt.Color(102, 102, 102));
         tbl_booklist.setColorFilasForeground2(new java.awt.Color(102, 102, 102));

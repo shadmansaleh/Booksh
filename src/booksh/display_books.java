@@ -75,16 +75,7 @@ public class display_books extends javax.swing.JPanel {
 
             var rs = st.executeQuery();
             while (rs.next()) {
-                String row_isbn = rs.getString("isbn");
-                String row_name = rs.getString("name");
-                String row_author = rs.getString("author");
-                String row_genre = rs.getString("genre");
-                int row_price = rs.getInt("price");
-                int row_quantity = rs.getInt("quantity");
-                float row_rating = rs.getFloat("rating");
-                int row_year = rs.getInt("year");
-                String row_desc = rs.getString("description");
-                books.add(new Book(row_isbn, row_name, row_author, row_price, row_quantity, row_genre, row_rating, row_year, row_desc));
+                books.add(new Book(rs));
             }
             update_res_panel(new BookView(books));
         } catch (Exception e) {

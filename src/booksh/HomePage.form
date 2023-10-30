@@ -31,7 +31,7 @@
     <Container class="javax.swing.JPanel" name="jPanel1">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="66" red="66" type="rgb"/>
+          <Color blue="ff" green="66" red="33" type="rgb"/>
         </Property>
       </Properties>
       <Constraints>
@@ -722,7 +722,7 @@
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
                     <MatteColorBorder bottom="0" left="0" right="0" top="15">
-                      <Color PropertyName="color" blue="ff" green="66" red="66" type="rgb"/>
+                      <Color PropertyName="color" blue="ff" green="66" red="33" type="rgb"/>
                     </MatteColorBorder>
                   </Border>
                 </Property>
@@ -836,7 +836,7 @@
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
                     <MatteColorBorder bottom="0" left="0" right="0" top="15">
-                      <Color PropertyName="color" blue="ff" green="66" red="66" type="rgb"/>
+                      <Color PropertyName="color" blue="ff" green="66" red="33" type="rgb"/>
                     </MatteColorBorder>
                   </Border>
                 </Property>
@@ -896,10 +896,10 @@
                       </Table>
                     </Property>
                     <Property name="colorBackgoundHead" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="66" red="66" type="rgb"/>
+                      <Color blue="ff" green="66" red="33" type="rgb"/>
                     </Property>
                     <Property name="colorBordeFilas" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="66" red="66" type="rgb"/>
+                      <Color blue="ff" green="66" red="33" type="rgb"/>
                     </Property>
                     <Property name="colorFilasBackgound2" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -1038,10 +1038,10 @@
                       </Table>
                     </Property>
                     <Property name="colorBackgoundHead" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="66" red="66" type="rgb"/>
+                      <Color blue="ff" green="66" red="33" type="rgb"/>
                     </Property>
                     <Property name="colorBordeFilas" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="66" red="66" type="rgb"/>
+                      <Color blue="ff" green="66" red="33" type="rgb"/>
                     </Property>
                     <Property name="colorFilasBackgound2" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>

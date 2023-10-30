@@ -198,7 +198,7 @@ public class HomePage extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(102, 102, 255));
+        jPanel1.setBackground(new java.awt.Color(51, 102, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         rSLabelImage1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/adminIcons/icons8_menu_48px_1.png"))); // NOI18N
@@ -497,7 +497,7 @@ public class HomePage extends javax.swing.JFrame {
         jLabel17.setText("No Of Customers");
         home_page.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 60, -1, 20));
 
-        jPanel13.setBorder(javax.swing.BorderFactory.createMatteBorder(15, 0, 0, 0, new java.awt.Color(102, 102, 255)));
+        jPanel13.setBorder(javax.swing.BorderFactory.createMatteBorder(15, 0, 0, 0, new java.awt.Color(51, 102, 255)));
         jPanel13.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txt_usercount.setFont(new java.awt.Font("Glass Antiqua", 1, 50)); // NOI18N
@@ -529,7 +529,7 @@ public class HomePage extends javax.swing.JFrame {
         jLabel20.setText("Defaulter List");
         home_page.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 60, -1, 20));
 
-        jPanel15.setBorder(javax.swing.BorderFactory.createMatteBorder(15, 0, 0, 0, new java.awt.Color(102, 102, 255)));
+        jPanel15.setBorder(javax.swing.BorderFactory.createMatteBorder(15, 0, 0, 0, new java.awt.Color(51, 102, 255)));
         jPanel15.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txt_defaultercount.setFont(new java.awt.Font("Glass Antiqua", 1, 50)); // NOI18N
@@ -548,8 +548,8 @@ public class HomePage extends javax.swing.JFrame {
                 "Name", "Author", "ISBN", "Price", "Quantity"
             }
         ));
-        tbl_booklist.setColorBackgoundHead(new java.awt.Color(102, 102, 255));
-        tbl_booklist.setColorBordeFilas(new java.awt.Color(102, 102, 255));
+        tbl_booklist.setColorBackgoundHead(new java.awt.Color(51, 102, 255));
+        tbl_booklist.setColorBordeFilas(new java.awt.Color(51, 102, 255));
         tbl_booklist.setColorFilasBackgound2(new java.awt.Color(255, 255, 255));
         tbl_booklist.setColorFilasForeground1(new java.awt.Color(102, 102, 102));
         tbl_booklist.setColorFilasForeground2(new java.awt.Color(102, 102, 102));
@@ -593,8 +593,8 @@ public class HomePage extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        tbl_userlist.setColorBackgoundHead(new java.awt.Color(102, 102, 255));
-        tbl_userlist.setColorBordeFilas(new java.awt.Color(102, 102, 255));
+        tbl_userlist.setColorBackgoundHead(new java.awt.Color(51, 102, 255));
+        tbl_userlist.setColorBordeFilas(new java.awt.Color(51, 102, 255));
         tbl_userlist.setColorFilasBackgound2(new java.awt.Color(255, 255, 255));
         tbl_userlist.setColorFilasForeground1(new java.awt.Color(102, 102, 102));
         tbl_userlist.setColorFilasForeground2(new java.awt.Color(102, 102, 102));

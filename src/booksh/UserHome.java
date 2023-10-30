@@ -4,18 +4,11 @@
  */
 package booksh;
 
-import java.awt.BorderLayout;
 import java.awt.Color;
 import java.util.ArrayList;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import org.jfree.chart.ChartFactory;
-import org.jfree.chart.ChartPanel;
-import org.jfree.chart.JFreeChart;
-import org.jfree.chart.plot.PiePlot;
-import org.jfree.data.general.DefaultPieDataset;
 import java.sql.*;
-import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -40,6 +33,7 @@ public class UserHome extends javax.swing.JFrame {
         sblabels.add(sbl5);
         sblabels.add(sbl6);
         sblabels.add(sbl7);
+        sblabels.add(sbl8);
 
         sbpanels.add(sbp1);
         sbpanels.add(sbp2);
@@ -48,7 +42,9 @@ public class UserHome extends javax.swing.JFrame {
         sbpanels.add(sbp5);
         sbpanels.add(sbp6);
         sbpanels.add(sbp7);
+        sbpanels.add(sbp8);
 //        sidebarCurActive = J
+        switchpage(8);
         update_dashboard_data();
     }
 
@@ -163,17 +159,24 @@ public class UserHome extends javax.swing.JFrame {
         sbp1 = new javax.swing.JPanel();
         sbl1 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        sb_dashboard = new javax.swing.JPanel();
-        jLabel11 = new javax.swing.JLabel();
+        sbp8 = new javax.swing.JPanel();
+        sbl8 = new javax.swing.JLabel();
         main_view = new javax.swing.JTabbedPane();
         display_books1 = new booksh.display_books();
+        userProfile1 = new booksh.UserProfile();
+        userCart1 = new booksh.UserCart();
+        userReturnBook1 = new booksh.UserReturnBook();
+        userViewRecords1 = new booksh.UserViewRecords();
+        userIssuedBooks1 = new booksh.UserIssuedBooks();
+        wishlist1 = new booksh.Wishlist();
+        userHomeIntro1 = new booksh.UserHomeIntro();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Booksh");
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(102, 102, 255));
+        jPanel1.setBackground(new java.awt.Color(51, 102, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         rSLabelImage1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/adminIcons/icons8_menu_48px_1.png"))); // NOI18N
@@ -374,7 +377,7 @@ public class UserHome extends javax.swing.JFrame {
         sbl3.setFont(new java.awt.Font("Glass Antiqua", 1, 18)); // NOI18N
         sbl3.setForeground(new java.awt.Color(153, 153, 153));
         sbl3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/adminIcons/icons8_Read_Online_26px.png"))); // NOI18N
-        sbl3.setText("Issue Book");
+        sbl3.setText("Cart");
         sbp3.add(sbl3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, -1, -1));
 
         sidebar.add(sbp3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 300, 60));
@@ -428,16 +431,27 @@ public class UserHome extends javax.swing.JFrame {
         jLabel5.setText("Features");
         sidebar.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, -1, -1));
 
-        sb_dashboard.setBackground(new java.awt.Color(51, 51, 51));
-        sb_dashboard.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        sbp8.setBackground(new java.awt.Color(51, 51, 51));
+        sbp8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                sbp8MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                sbp8MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                sbp8MouseExited(evt);
+            }
+        });
+        sbp8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel11.setFont(new java.awt.Font("Glass Antiqua", 1, 18)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(153, 153, 153));
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/adminIcons/icons8_Library_26px_1.png"))); // NOI18N
-        jLabel11.setText("IMS Dashboard");
-        sb_dashboard.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, -1, -1));
+        sbl8.setFont(new java.awt.Font("Glass Antiqua", 1, 18)); // NOI18N
+        sbl8.setForeground(new java.awt.Color(153, 153, 153));
+        sbl8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/adminIcons/icons8_Library_26px_1.png"))); // NOI18N
+        sbl8.setText("Home");
+        sbp8.add(sbl8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, -1, -1));
 
-        sidebar.add(sb_dashboard, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 300, 60));
+        sidebar.add(sbp8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 300, 60));
 
         getContentPane().add(sidebar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 300, 730));
 
@@ -448,6 +462,13 @@ public class UserHome extends javax.swing.JFrame {
             }
         });
         main_view.addTab("tab1", display_books1);
+        main_view.addTab("tab2", userProfile1);
+        main_view.addTab("tab3", userCart1);
+        main_view.addTab("tab4", userReturnBook1);
+        main_view.addTab("tab5", userViewRecords1);
+        main_view.addTab("tab6", userIssuedBooks1);
+        main_view.addTab("tab7", wishlist1);
+        main_view.addTab("tab8", userHomeIntro1);
 
         getContentPane().add(main_view, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 40, 1200, 760));
 
@@ -597,6 +618,21 @@ public class UserHome extends javax.swing.JFrame {
         sb_mousehover(6, false);
     }//GEN-LAST:event_sbp7MouseExited
 
+    private void sbp8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sbp8MouseClicked
+        // TODO add your handling code here:
+        switchpage(8);
+    }//GEN-LAST:event_sbp8MouseClicked
+
+    private void sbp8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sbp8MouseEntered
+        // TODO add your handling code here:
+        sb_mousehover(7, true);
+    }//GEN-LAST:event_sbp8MouseEntered
+
+    private void sbp8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sbp8MouseExited
+        // TODO add your handling code here:
+        sb_mousehover(7, false);
+    }//GEN-LAST:event_sbp8MouseExited
+
     /**
      * @param args the command line arguments
      */
@@ -635,7 +671,6 @@ public class UserHome extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private booksh.display_books display_books1;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel24;
@@ -650,7 +685,6 @@ public class UserHome extends javax.swing.JFrame {
     private javax.swing.JLabel lb_uname;
     private javax.swing.JTabbedPane main_view;
     private rojerusan.RSLabelImage rSLabelImage1;
-    private javax.swing.JPanel sb_dashboard;
     private javax.swing.JLabel sbl1;
     private javax.swing.JLabel sbl2;
     private javax.swing.JLabel sbl3;
@@ -658,6 +692,7 @@ public class UserHome extends javax.swing.JFrame {
     private javax.swing.JLabel sbl5;
     private javax.swing.JLabel sbl6;
     private javax.swing.JLabel sbl7;
+    private javax.swing.JLabel sbl8;
     private javax.swing.JPanel sbp1;
     private javax.swing.JPanel sbp2;
     private javax.swing.JPanel sbp3;
@@ -665,6 +700,14 @@ public class UserHome extends javax.swing.JFrame {
     private javax.swing.JPanel sbp5;
     private javax.swing.JPanel sbp6;
     private javax.swing.JPanel sbp7;
+    private javax.swing.JPanel sbp8;
     private javax.swing.JPanel sidebar;
+    private booksh.UserCart userCart1;
+    private booksh.UserHomeIntro userHomeIntro1;
+    private booksh.UserIssuedBooks userIssuedBooks1;
+    private booksh.UserProfile userProfile1;
+    private booksh.UserReturnBook userReturnBook1;
+    private booksh.UserViewRecords userViewRecords1;
+    private booksh.Wishlist wishlist1;
     // End of variables declaration//GEN-END:variables
 }

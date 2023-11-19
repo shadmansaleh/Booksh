@@ -26,17 +26,309 @@ public class UserViewRecords extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel5 = new javax.swing.JPanel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jPanel6 = new javax.swing.JPanel();
+        rSPopuMenu1 = new rojerusan.RSPopuMenu();
+        rSPopuMenu2 = new rojeru_san.complementos.RSPopuMenu();
+        jMenu1 = new javax.swing.JMenu();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu2 = new javax.swing.JMenu();
+        jMenu3 = new javax.swing.JMenu();
+        jPanel4 = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel12 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
+        jPanel7 = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
+        jPanel8 = new javax.swing.JPanel();
+        jLabel10 = new javax.swing.JLabel();
+        jPanel9 = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
+        jPanel10 = new javax.swing.JPanel();
+        jSpinner2 = new javax.swing.JSpinner();
+        jPanel11 = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        jPanel12 = new javax.swing.JPanel();
+        jCheckBox1 = new javax.swing.JCheckBox();
+        jPanel14 = new javax.swing.JPanel();
+        txt_bookcount2 = new javax.swing.JLabel();
+        jPanel15 = new javax.swing.JPanel();
+        txt_bookcount3 = new javax.swing.JLabel();
+        jPanel16 = new javax.swing.JPanel();
+        txt_bookcount4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        popular_this_week = new javax.swing.JTable();
+        jLabel5 = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        popular_this_week2 = new javax.swing.JTable();
+
+        jPanel5.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel5.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 590, 240, 30));
+        jPanel5.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 430, 240, 30));
+        jPanel5.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 530, 240, 30));
+
+        jPanel6.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        rSPopuMenu1.setBackground(new java.awt.Color(0, 0, 0));
+
+        jMenu1.setText("jMenu1");
+
+        jMenu2.setText("File");
+        jMenuBar1.add(jMenu2);
+
+        jMenu3.setText("Edit");
+        jMenuBar1.add(jMenu3);
 
         setBackground(new java.awt.Color(255, 255, 255));
+        setForeground(new java.awt.Color(204, 204, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setText("ViewRecords");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 70, -1, -1));
+        jPanel4.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel12.setFont(new java.awt.Font("Helvetica Neue", 1, 15)); // NOI18N
+        jLabel12.setText("Pages");
+        jPanel1.add(jLabel12);
+
+        jPanel4.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 510, 70, 40));
+
+        jLabel7.setFont(new java.awt.Font("Helvetica Neue", 3, 18)); // NOI18N
+        jLabel7.setText("Book Worm");
+        jPanel2.add(jLabel7);
+
+        jPanel4.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 320, 250, -1));
+
+        jLabel8.setFont(new java.awt.Font("Helvetica Neue", 1, 20)); // NOI18N
+        jLabel8.setText("Current Status:");
+        jPanel3.add(jLabel8);
+
+        jPanel4.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, 250, 40));
+
+        jLabel9.setFont(new java.awt.Font("Helvetica Neue", 3, 18)); // NOI18N
+        jLabel9.setText("Bibliophile");
+        jPanel7.add(jLabel9);
+
+        jPanel4.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, 250, -1));
+
+        jLabel10.setFont(new java.awt.Font("Helvetica Neue", 1, 20)); // NOI18N
+        jLabel10.setText("Next Status:");
+        jPanel8.add(jLabel10);
+
+        jPanel4.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, 250, 40));
+
+        jLabel11.setFont(new java.awt.Font("Helvetica Neue", 1, 20)); // NOI18N
+        jLabel11.setText("Weekly Target:");
+        jPanel9.add(jLabel11);
+
+        jPanel4.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 450, 250, 40));
+
+        jPanel10.add(jSpinner2);
+
+        jPanel4.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 510, 70, 40));
+
+        jLabel6.setFont(new java.awt.Font("Helvetica Neue", 1, 15)); // NOI18N
+        jLabel6.setText("To Read");
+        jPanel11.add(jLabel6);
+
+        jPanel4.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 510, 80, 40));
+
+        jPanel12.setBackground(new java.awt.Color(0, 153, 153));
+
+        jCheckBox1.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        jCheckBox1.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBox1.setText("Target Accomplished");
+        jCheckBox1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox1ActionPerformed(evt);
+            }
+        });
+        jPanel12.add(jCheckBox1);
+
+        jPanel4.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 570, 190, -1));
+
+        add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 0, 350, 810));
+
+        jPanel14.setBorder(javax.swing.BorderFactory.createMatteBorder(15, 0, 0, 0, new java.awt.Color(153, 153, 255)));
+        jPanel14.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        txt_bookcount2.setFont(new java.awt.Font("Glass Antiqua", 1, 50)); // NOI18N
+        txt_bookcount2.setForeground(new java.awt.Color(102, 102, 102));
+        txt_bookcount2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/adminIcons/icons8_Book_Shelf_50px.png"))); // NOI18N
+        txt_bookcount2.setText("35");
+        jPanel14.add(txt_bookcount2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, -1, -1));
+
+        add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 120, 220, 130));
+
+        jPanel15.setBorder(javax.swing.BorderFactory.createMatteBorder(15, 0, 0, 0, new java.awt.Color(153, 153, 255)));
+        jPanel15.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        txt_bookcount3.setFont(new java.awt.Font("Glass Antiqua", 1, 50)); // NOI18N
+        txt_bookcount3.setForeground(new java.awt.Color(102, 102, 102));
+        txt_bookcount3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/adminIcons/icons8_Book_Shelf_50px.png"))); // NOI18N
+        txt_bookcount3.setText("03");
+        jPanel15.add(txt_bookcount3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, -1, -1));
+
+        add(jPanel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 350, 220, 130));
+
+        jPanel16.setBorder(javax.swing.BorderFactory.createMatteBorder(15, 0, 0, 0, new java.awt.Color(153, 153, 255)));
+        jPanel16.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        txt_bookcount4.setFont(new java.awt.Font("Glass Antiqua", 1, 50)); // NOI18N
+        txt_bookcount4.setForeground(new java.awt.Color(102, 102, 102));
+        txt_bookcount4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/adminIcons/icons8_Book_Shelf_50px.png"))); // NOI18N
+        txt_bookcount4.setText("06");
+        jPanel16.add(txt_bookcount4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, -1, -1));
+
+        add(jPanel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 560, 220, 130));
+
+        jLabel1.setFont(new java.awt.Font("Kefa", 1, 18)); // NOI18N
+        jLabel1.setText("Rating Given");
+        jLabel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 510, 130, -1));
+
+        jLabel2.setBackground(new java.awt.Color(153, 153, 153));
+        jLabel2.setFont(new java.awt.Font("Kefa", 1, 18)); // NOI18N
+        jLabel2.setText("Total Read");
+        jLabel2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 70, 110, -1));
+
+        jLabel3.setFont(new java.awt.Font("Kefa", 1, 18)); // NOI18N
+        jLabel3.setText("This Month");
+        jLabel3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 290, 110, -1));
+
+        jLabel4.setBackground(new java.awt.Color(204, 204, 204));
+        jLabel4.setFont(new java.awt.Font("Al Bayan", 1, 18)); // NOI18N
+        jLabel4.setText("Trending");
+        jLabel4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, -1));
+
+        popular_this_week.setAutoCreateRowSorter(true);
+        popular_this_week.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        popular_this_week.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"Novel", "Bengal Divide",  new Integer(1347632), "Joya Chatterji",  new Double(4.5)},
+                {"Biography", "Mein Kampf",  new Integer(231456), "Hitlar",  new Double(4.0)},
+                {"Fiction", "Shoe Dog",  new Integer(1908732), "Phil Knight",  new Double(3.8)},
+                {"Thriller", "Atomic Habits",  new Integer(1456345), "Shadman",  new Double(5.0)},
+                {"Drama", "Hamlet",  new Integer(1235467), "Shakespeare",  new Double(4.0)}
+            },
+            new String [] {
+                "Genre", "Book Name ", "Book ID", "Author", "Rating"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.Double.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        popular_this_week.setGridColor(new java.awt.Color(0, 0, 0));
+        popular_this_week.setRowHeight(60);
+        jScrollPane1.setViewportView(popular_this_week);
+
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, 520, 270));
+
+        jLabel5.setBackground(new java.awt.Color(204, 204, 204));
+        jLabel5.setFont(new java.awt.Font("Al Bayan", 1, 18)); // NOI18N
+        jLabel5.setText("Popular This Week");
+        jLabel5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, -1, -1));
+
+        popular_this_week2.setAutoCreateRowSorter(true);
+        popular_this_week2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        popular_this_week2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"Novel", "Bengal Divide",  new Integer(1347632), "Joya Chatterji",  new Double(4.5)},
+                {"Biography", "Mein Kampf",  new Integer(231456), "Hitlar",  new Double(4.0)},
+                {"Fiction", "Shoe Dog",  new Integer(1908732), "Phil Knight",  new Double(3.8)},
+                {"Thriller", "Atomic Habits",  new Integer(1456345), "Shadman",  new Double(5.0)},
+                {"Drama", "Hamlet",  new Integer(1235467), "Shakespeare",  new Double(4.0)}
+            },
+            new String [] {
+                "Genre", "Book Name ", "Book ID", "Author", "Rating"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.Double.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        popular_this_week2.setGridColor(new java.awt.Color(0, 0, 0));
+        popular_this_week2.setRowHeight(60);
+        jScrollPane3.setViewportView(popular_this_week2);
+
+        add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 520, 260));
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
+    private javax.swing.JPanel jPanel14;
+    private javax.swing.JPanel jPanel15;
+    private javax.swing.JPanel jPanel16;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JSpinner jSpinner2;
+    private javax.swing.JTable popular_this_week;
+    private javax.swing.JTable popular_this_week2;
+    private rojerusan.RSPopuMenu rSPopuMenu1;
+    private rojeru_san.complementos.RSPopuMenu rSPopuMenu2;
+    private javax.swing.JLabel txt_bookcount2;
+    private javax.swing.JLabel txt_bookcount3;
+    private javax.swing.JLabel txt_bookcount4;
     // End of variables declaration//GEN-END:variables
 }

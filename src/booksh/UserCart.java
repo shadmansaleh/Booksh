@@ -36,17 +36,17 @@ public class UserCart extends javax.swing.JPanel {
             Connection con = DBConnection.getConnection();
             String query = "SELECT * FROM requests INNER JOIN book_details ON book_details.book_id = requests.book_id WHERE user_id = ?";
             var st = con.prepareStatement(query);
-            st.setInt(1, Globals.user);
+            st.setInt(1, Globals.user_id);
 
             var rs = st.executeQuery();
             while (rs.next()) {
                 books.add(new Book(rs));
             }
-            update_res_panel(new BookView(books));
+            update_res_panel(new BookView(books, "CART"));
 
             query = "SELECT SUM(book_details.price) AS tot_price FROM requests INNER JOIN book_details ON book_details.book_id = requests.book_id WHERE user_id = ? AND requests.type=\"BUY\"";
             st = con.prepareStatement(query);
-            st.setInt(1, Globals.user);
+            st.setInt(1, Globals.user_id);
             rs = st.executeQuery();
             if (rs.next()) {
                 lbl_ammount.setText(String.valueOf(rs.getInt("tot_price")));

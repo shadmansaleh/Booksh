@@ -85,7 +85,7 @@ public class UserProfile extends javax.swing.JPanel {
         jPanel1.add(rSLabelImage1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1210, 410));
 
         jLabel1.setFont(new java.awt.Font("Calibri Light", 3, 36)); // NOI18N
-        jLabel1.setText(" Mathuse hartz");
+        jLabel1.setText("Shadman Saleh");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 500, 280, 90));
 
         jLabel2.setFont(new java.awt.Font("Calibri Light", 0, 20)); // NOI18N

@@ -4,18 +4,32 @@
  */
 package booksh.subpanels;
 
+import booksh.DBConnection;
+
 /**
  *
  * @author shadman
  */
-public class OrderInfoPanel1Buy extends javax.swing.JPanel {
+public class OrderInfoPanelBuy extends javax.swing.JPanel {
 
     /**
      * Creates new form OrderInfoPanel
      */
-    public OrderInfoPanel1Buy() {
+
+    int book_id, user_id;
+    
+    public OrderInfoPanelBuy() {
         initComponents();
     }
+
+    public void set_data(int user_id, int book_id, String uname, String book, String author) {
+        this.book_id = book_id;
+        this.user_id = user_id;
+        lbl_uname.setText(uname);
+        lbl_bookname.setText(book);
+        lbl_author.setText(author);
+    }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -27,12 +41,12 @@ public class OrderInfoPanel1Buy extends javax.swing.JPanel {
     private void initComponents() {
 
         lbl_bookname = new javax.swing.JLabel();
-        lb_bookname = new javax.swing.JLabel();
+        lb_const_want = new javax.swing.JLabel();
         lbl_uname = new javax.swing.JLabel();
         lbl_author = new javax.swing.JLabel();
         btn_approve = new javax.swing.JLabel();
         btn_reject = new javax.swing.JLabel();
-        lb_bookname1 = new javax.swing.JLabel();
+        lb_const_by = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(151, 251, 151));
 
@@ -40,9 +54,9 @@ public class OrderInfoPanel1Buy extends javax.swing.JPanel {
         lbl_bookname.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl_bookname.setText("Book Name");
 
-        lb_bookname.setFont(new java.awt.Font("Glass Antiqua", 0, 22)); // NOI18N
-        lb_bookname.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lb_bookname.setText("wants to buy");
+        lb_const_want.setFont(new java.awt.Font("Glass Antiqua", 0, 22)); // NOI18N
+        lb_const_want.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lb_const_want.setText("wants to buy");
 
         lbl_uname.setFont(new java.awt.Font("Glass Antiqua", 2, 24)); // NOI18N
         lbl_uname.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -60,9 +74,9 @@ public class OrderInfoPanel1Buy extends javax.swing.JPanel {
             }
         });
 
-        lb_bookname1.setFont(new java.awt.Font("Glass Antiqua", 0, 22)); // NOI18N
-        lb_bookname1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lb_bookname1.setText("by");
+        lb_const_by.setFont(new java.awt.Font("Glass Antiqua", 0, 22)); // NOI18N
+        lb_const_by.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lb_const_by.setText("by");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -71,11 +85,11 @@ public class OrderInfoPanel1Buy extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(lbl_uname, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lb_bookname, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lb_const_want, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lbl_bookname, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lb_bookname1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lb_const_by, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lbl_author, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(122, 122, 122)
@@ -93,11 +107,11 @@ public class OrderInfoPanel1Buy extends javax.swing.JPanel {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(lbl_bookname, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(lb_bookname1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lb_const_by, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(lbl_author, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(lbl_uname, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(lb_bookname, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(lb_const_want, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -109,14 +123,24 @@ public class OrderInfoPanel1Buy extends javax.swing.JPanel {
 
     private void btn_rejectMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_rejectMouseClicked
         // TODO add your handling code here:
+         try {
+            var con = DBConnection.getConnection();
+            String query = "DELETE FROM requests WHERE book_id=? AND user_id=?";
+            var pat = con.prepareStatement(query);
+            pat.setInt(1, book_id);
+            pat.setInt(2, user_id);
+            pat.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }//GEN-LAST:event_btn_rejectMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel btn_approve;
     private javax.swing.JLabel btn_reject;
-    private javax.swing.JLabel lb_bookname;
-    private javax.swing.JLabel lb_bookname1;
+    private javax.swing.JLabel lb_const_by;
+    private javax.swing.JLabel lb_const_want;
     private javax.swing.JLabel lbl_author;
     private javax.swing.JLabel lbl_bookname;
     private javax.swing.JLabel lbl_uname;

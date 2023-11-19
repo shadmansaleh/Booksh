@@ -46,6 +46,7 @@ public class UserHome extends javax.swing.JFrame {
 //        sidebarCurActive = J
         switchpage(8);
         update_dashboard_data();
+        lb_uname.setText(Globals.username);
     }
 
     public void update_dashboard_data() {

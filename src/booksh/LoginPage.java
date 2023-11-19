@@ -49,7 +49,9 @@ public class LoginPage extends javax.swing.JFrame {
             
             ResultSet rs = pat.executeQuery();
             
-            if (true || rs.next()) { // TODO: remove (true: bypass login logic to ease testing)
+            if (rs.next()) { // TODO: remove (true: bypass login logic to ease testing)
+                Globals.user_id = rs.getInt("id");
+                Globals.username = rs.getString("name");
                 if (rb_user.isSelected()) {
                     new UserHome().setVisible(true);
                 } else {

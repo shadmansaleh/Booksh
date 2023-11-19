@@ -10,14 +10,14 @@ import javax.swing.JOptionPane;
  *
  * @author shadman
  */
-public class book_view_booklist extends javax.swing.JPanel {
+public class book_view_wishlist extends javax.swing.JPanel {
 
     /**
      * Creates new form book_view_booklist
      * @param book
      */
     Book book;
-    public book_view_booklist(Book book) {
+    public book_view_wishlist(Book book) {
         initComponents();
         hide_info();
         this.book = book;
@@ -90,8 +90,6 @@ public class book_view_booklist extends javax.swing.JPanel {
         jLabel7 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         lb_genre = new javax.swing.JLabel();
-        ic_boroow = new rojerusan.RSLabelImage();
-        ic_buy = new rojerusan.RSLabelImage();
         ic_wishlist = new rojerusan.RSLabelImage();
         img_cover = new rojerusan.RSLabelImage();
 
@@ -109,85 +107,61 @@ public class book_view_booklist extends javax.swing.JPanel {
         lb_bookname.setForeground(new java.awt.Color(255, 255, 255));
         lb_bookname.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lb_bookname.setText("Book Name");
-        pnl_contrast.add(lb_bookname, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 230, 50));
+        pnl_contrast.add(lb_bookname, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 230, 50));
 
         lb_author.setFont(new java.awt.Font("Glass Antiqua", 2, 24)); // NOI18N
         lb_author.setForeground(new java.awt.Color(255, 255, 255));
         lb_author.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lb_author.setText("Author Name ");
-        pnl_contrast.add(lb_author, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, 210, 60));
+        pnl_contrast.add(lb_author, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 210, 60));
 
         jLabel5.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(251, 251, 251));
         jLabel5.setText("Published");
-        pnl_contrast.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 90, 30));
+        pnl_contrast.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 90, 30));
 
         lb_rating.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
         lb_rating.setForeground(new java.awt.Color(251, 251, 251));
         lb_rating.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lb_rating.setText("4.2");
-        pnl_contrast.add(lb_rating, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 230, 120, 20));
+        pnl_contrast.add(lb_rating, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 270, 120, 20));
 
         lb_price.setBackground(new java.awt.Color(255, 255, 255));
         lb_price.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         lb_price.setForeground(new java.awt.Color(251, 251, 251));
         lb_price.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lb_price.setText("250");
-        pnl_contrast.add(lb_price, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 280, 120, 30));
+        pnl_contrast.add(lb_price, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 320, 120, 30));
 
         jLabel6.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(251, 251, 251));
         jLabel6.setText("Price");
-        pnl_contrast.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 50, 30));
+        pnl_contrast.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, 50, 30));
 
         lb_year.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
         lb_year.setForeground(new java.awt.Color(251, 251, 251));
         lb_year.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lb_year.setText("2017");
-        pnl_contrast.add(lb_year, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 180, 110, 20));
+        pnl_contrast.add(lb_year, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 220, 110, 20));
 
         jLabel7.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(251, 251, 251));
         jLabel7.setText("Rating");
-        pnl_contrast.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, 50, 30));
+        pnl_contrast.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, 50, 30));
 
         jLabel3.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(251, 251, 251));
         jLabel3.setText("Genre");
-        pnl_contrast.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 50, 30));
+        pnl_contrast.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 50, 30));
 
         lb_genre.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
         lb_genre.setForeground(new java.awt.Color(255, 255, 255));
         lb_genre.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lb_genre.setText("Thriller");
-        pnl_contrast.add(lb_genre, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 130, 110, 20));
-
-        ic_boroow.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_Sell_white_50px.png"))); // NOI18N
-        ic_boroow.setToolTipText("Borrow");
-        ic_boroow.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                ic_boroowMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                ic_boroowMouseEntered(evt);
-            }
-        });
-        pnl_contrast.add(ic_boroow, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, 50, 40));
-
-        ic_buy.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-buy-white-50.png"))); // NOI18N
-        ic_buy.setToolTipText("Buy");
-        ic_buy.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                ic_buyMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                ic_buyMouseEntered(evt);
-            }
-        });
-        pnl_contrast.add(ic_buy, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 360, 50, 40));
+        pnl_contrast.add(lb_genre, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, 110, 20));
 
         ic_wishlist.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        ic_wishlist.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-love-(white)-50.png"))); // NOI18N
+        ic_wishlist.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-cross-red-50.png"))); // NOI18N
         ic_wishlist.setToolTipText("Add to Wishlist");
         ic_wishlist.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -197,7 +171,7 @@ public class book_view_booklist extends javax.swing.JPanel {
                 ic_wishlistMouseEntered(evt);
             }
         });
-        pnl_contrast.add(ic_wishlist, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 360, 50, 40));
+        pnl_contrast.add(ic_wishlist, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 0, 60, 60));
 
         add(pnl_contrast, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 280, 420));
 
@@ -213,76 +187,15 @@ public class book_view_booklist extends javax.swing.JPanel {
         add(img_cover, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 280, 420));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void ic_boroowMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ic_boroowMouseClicked
-        // TODO add your handling code here:
-        try {
-            var con = DBConnection.getConnection();
-            {
-                // check
-                String query = "SELECT book_id FROM requests WHERE book_id=? AND user_id=? AND type=?";
-                var pat = con.prepareStatement(query);
-                pat.setInt(1, this.book.book_id);
-                pat.setInt(2, Globals.user_id);
-                pat.setString(3, "BRW");
-                if (pat.executeQuery().next()) {
-                    JOptionPane.showMessageDialog(this, this.book.name + " already in cart");
-                    return;
-                }
-            }
-            String query = "INSERT INTO requests (book_id, user_id, type) VALUES (?, ?, ?)";
-            var pat = con.prepareStatement(query);
-            pat.setInt(1, this.book.book_id);
-            pat.setInt(2, Globals.user_id);
-            pat.setString(3, "BRW");
-            if (pat.executeUpdate() > 0)
-                JOptionPane.showMessageDialog(this, this.book.name + " added to cart");
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        JOptionPane.showMessageDialog(this, this.book.name + " asked to borrow");
-    }//GEN-LAST:event_ic_boroowMouseClicked
-
-    private void ic_buyMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ic_buyMouseClicked
-        // TODO add your handling code here:
-        try {
-            var con = DBConnection.getConnection();
-            {
-                // check
-                String query = "SELECT book_id FROM requests WHERE book_id=? AND user_id=? AND type=?";
-                var pat = con.prepareStatement(query);
-                pat.setInt(1, this.book.book_id);
-                pat.setInt(2, Globals.user_id);
-                pat.setString(3, "BUY");
-                if (pat.executeQuery().next()) {
-                    JOptionPane.showMessageDialog(this, this.book.name + " already in cart");
-                    return;
-                }
-            }
-            String query = "INSERT INTO requests (book_id, user_id, type) VALUES (?, ?, ?)";
-            var pat = con.prepareStatement(query);
-            pat.setInt(1, this.book.book_id);
-            pat.setInt(2, Globals.user_id);
-            pat.setString(3, "BUY");
-            if (pat.executeUpdate() > 0)
-                JOptionPane.showMessageDialog(this, this.book.name + " asked to buy");
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }//GEN-LAST:event_ic_buyMouseClicked
-
     private void ic_wishlistMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ic_wishlistMouseClicked
         // TODO add your handling code here:
         try {
             var con = DBConnection.getConnection();
-            String query = "INSERT INTO wishlist (book_id, user_id) VALUES (?, ?)";
+            String query = "DELETE FROM wishlist WHERE book_id=? AND user_id=?";
             var pat = con.prepareStatement(query);
             pat.setInt(1, this.book.book_id);
             pat.setInt(2, Globals.user_id);
-            if (pat.executeUpdate() > 0)
-                JOptionPane.showMessageDialog(this, this.book.name + " added to wishlist");
-
+            pat.executeUpdate();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -298,16 +211,6 @@ public class book_view_booklist extends javax.swing.JPanel {
         hide_info();
     }//GEN-LAST:event_img_coverMouseExited
 
-    private void ic_boroowMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ic_boroowMouseEntered
-        // TODO add your handling code here:
-        unhide_info();
-    }//GEN-LAST:event_ic_boroowMouseEntered
-
-    private void ic_buyMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ic_buyMouseEntered
-        // TODO add your handling code here:
-        unhide_info();
-    }//GEN-LAST:event_ic_buyMouseEntered
-
     private void ic_wishlistMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ic_wishlistMouseEntered
         // TODO add your handling code here:
         unhide_info();
@@ -315,8 +218,6 @@ public class book_view_booklist extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private rojerusan.RSLabelImage ic_boroow;
-    private rojerusan.RSLabelImage ic_buy;
     private rojerusan.RSLabelImage ic_wishlist;
     private rojerusan.RSLabelImage img_cover;
     private javax.swing.JLabel jLabel3;

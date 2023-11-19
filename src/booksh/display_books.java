@@ -77,7 +77,7 @@ public class display_books extends javax.swing.JPanel {
             while (rs.next()) {
                 books.add(new Book(rs));
             }
-            update_res_panel(new BookView(books));
+            update_res_panel(new BookView(books, ""));
         } catch (Exception e) {
             e.printStackTrace();
         }

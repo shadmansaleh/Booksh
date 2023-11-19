@@ -9,5 +9,6 @@ package booksh;
  * @author shadman
  */
 public class Globals {
-    public static int user = 1;
+    public static int user_id = 1;
+    public static String username = "Shadman";
 }

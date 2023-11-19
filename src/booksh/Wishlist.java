@@ -36,13 +36,13 @@ public class Wishlist extends javax.swing.JPanel {
             Connection con = DBConnection.getConnection();
             String query = "SELECT * FROM wishlist INNER JOIN book_details ON book_details.book_id = wishlist.book_id WHERE user_id = ?";
             var st = con.prepareStatement(query);
-            st.setInt(1, Globals.user);
+            st.setInt(1, Globals.user_id);
 
             var rs = st.executeQuery();
             while (rs.next()) {
                 books.add(new Book(rs));
             }
-            update_res_panel(new BookView(books));
+            update_res_panel(new BookView(books, "WISH"));
         } catch (Exception e) {
             e.printStackTrace();
         }

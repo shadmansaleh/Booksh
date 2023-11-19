@@ -21,7 +21,7 @@ public class BookView extends javax.swing.JPanel {
     int rows = 0;
     static final Rectangle pnl = new Rectangle(280, 420);
 
-    public BookView(ArrayList<Book> books) {
+    public BookView(ArrayList<Book> books, String type) {
         initComponents();
         this.books = books;
         rows = Math.ceilDiv(books.size(), 3);
@@ -29,7 +29,15 @@ public class BookView extends javax.swing.JPanel {
         var grid = this;
         this.setBackground(Cl.bgp);
         for (Book bk: books) {
-            this.add(new book_view_booklist(bk));
+            if (type.equals("CART")) {
+                this.add(new book_view_cart(bk));
+            } else if (type.equals("WISH")) {
+                this.add(new book_view_wishlist(bk));
+            } else if (type.equals("BRW")) {
+                this.add(new book_view_borrowed(bk));
+            } else {
+                this.add(new book_view_booklist(bk));
+            }
         }
     }
 

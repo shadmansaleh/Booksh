@@ -515,12 +515,12 @@ public class ManageBooksPanel extends javax.swing.JPanel {
         jPanel2.add(txt_bookdescription, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 810, 230, 30));
 
         jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ImageIcon.png"))); // NOI18N
-        jPanel2.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 900, 40, 50));
+        jPanel2.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 900, 40, 50));
 
         lbl_photo.setBackground(new java.awt.Color(255, 255, 255));
         lbl_photo.setForeground(new java.awt.Color(255, 255, 255));
         lbl_photo.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
-        jPanel2.add(lbl_photo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 880, 110, 90));
+        jPanel2.add(lbl_photo, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 860, 100, 160));
 
         jButton3.setBackground(new java.awt.Color(102, 102, 255));
         jButton3.setFont(new java.awt.Font("Yu Gothic UI", 1, 16)); // NOI18N
@@ -645,7 +645,7 @@ public class ManageBooksPanel extends javax.swing.JPanel {
                 txt_bookyear.setText(String.valueOf(rs.getInt("year")));
                 txt_bookdescription.setText(rs.getString("description"));
                 Blob blob = rs.getBlob("cover_photo");
-                ImageIcon icon = new ImageIcon(blob.getBytes(1L, (int) blob.length()));
+                ImageIcon icon = new ImageIcon(new ImageIcon(blob.getBytes(1L, (int) blob.length())).getImage().getScaledInstance(100, 160, Image.SCALE_SMOOTH));
                 lbl_photo.setIcon(icon);
             }
         } catch (Exception e) {
@@ -690,7 +690,7 @@ public class ManageBooksPanel extends javax.swing.JPanel {
         String path = f.getAbsolutePath();
         try {
             BufferedImage bi = ImageIO.read(new File(path));
-            Image img = bi.getScaledInstance(160, 160, Image.SCALE_SMOOTH);
+            Image img = bi.getScaledInstance(100, 160, Image.SCALE_SMOOTH);
             ImageIcon icon = new ImageIcon(img);
             lbl_photo.setIcon(icon);
             cur_image_path = path;

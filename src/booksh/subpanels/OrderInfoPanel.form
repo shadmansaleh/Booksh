@@ -24,17 +24,17 @@
           <Group type="102" attributes="0">
               <Component id="lbl_uname" min="-2" pref="150" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="lb_bookname" min="-2" pref="170" max="-2" attributes="0"/>
+              <Component id="lb_const_want" min="-2" pref="170" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="lbl_bookname" min="-2" pref="170" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="lb_bookname1" min="-2" pref="41" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="lb_const_by" min="-2" pref="41" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="lbl_author" min="-2" pref="250" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="116" max="-2" attributes="0"/>
-              <Component id="btn_reject" min="-2" pref="50" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
+              <Component id="btn_approve" min="-2" pref="50" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-              <Component id="btn_approve" min="-2" max="-2" attributes="0"/>
+              <Component id="btn_reject" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="17" max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -48,20 +48,20 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="lbl_bookname" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
-                              <Component id="lb_bookname1" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                              <Component id="lb_const_by" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                               <Component id="lbl_author" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                           </Group>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="lbl_uname" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                              <Component id="lb_bookname" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                              <Component id="lb_const_want" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="btn_approve" min="-2" max="-2" attributes="0"/>
                           <Component id="btn_reject" min="-2" max="-2" attributes="0"/>
+                          <Component id="btn_approve" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -80,7 +80,7 @@
         <Property name="text" type="java.lang.String" value="Book Name"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lb_bookname">
+    <Component class="javax.swing.JLabel" name="lb_const_want">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Glass Antiqua" size="22" style="0"/>
@@ -106,21 +106,28 @@
         <Property name="text" type="java.lang.String" value="Author"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="btn_approve">
+    <Component class="javax.swing.JLabel" name="btn_reject">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/icons/icons8-cross-red-50.png"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_rejectMouseClicked"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="btn_reject">
+    <Component class="javax.swing.JLabel" name="btn_approve">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/icons/icons8-check-green-48.png"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_approveMouseClicked"/>
+        <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="btn_approveKeyPressed"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="lb_bookname1">
+    <Component class="javax.swing.JLabel" name="lb_const_by">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Glass Antiqua" size="22" style="0"/>

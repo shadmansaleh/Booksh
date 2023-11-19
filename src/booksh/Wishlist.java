@@ -4,6 +4,12 @@
  */
 package booksh;
 
+import java.util.ArrayList;
+import javax.swing.JScrollBar;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
 /**
  *
  * @author shadman
@@ -15,8 +21,39 @@ public class Wishlist extends javax.swing.JPanel {
      */
     public Wishlist() {
         initComponents();
+        update_list();
+        JScrollBar verticalScrollBar = ScrollView.getVerticalScrollBar();
+        verticalScrollBar.setUnitIncrement(20);
+        verticalScrollBar.setBlockIncrement(200);
     }
 
+    BookView booklist = null;
+
+    public void update_list() {
+        var books = new ArrayList<Book>();
+
+        try {
+            Connection con = DBConnection.getConnection();
+            String query = "SELECT * FROM wishlist INNER JOIN book_details ON book_details.book_id = wishlist.book_id WHERE user_id = ?";
+            var st = con.prepareStatement(query);
+            st.setInt(1, Globals.user);
+
+            var rs = st.executeQuery();
+            while (rs.next()) {
+                books.add(new Book(rs));
+            }
+            update_res_panel(new BookView(books));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void update_res_panel(BookView bv) {
+        if (booklist != null) ScrollView.getViewport().remove(booklist);
+        ScrollView.getViewport().add(bv);
+        this.validate();
+        this.repaint();
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -26,17 +63,25 @@ public class Wishlist extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        ScrollView = new javax.swing.JScrollPane();
+        jLabel11 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setText("Wishlist");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 70, -1, -1));
+        ScrollView.setBorder(null);
+        add(ScrollView, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 1220, 630));
+
+        jLabel11.setFont(new java.awt.Font("Glass Antiqua", 1, 36)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(251, 51, 51));
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AddNewBookIcons/icons8_Book_50px_1.png"))); // NOI18N
+        jLabel11.setText("WishList");
+        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 10, 190, 90));
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollPane ScrollView;
+    private javax.swing.JLabel jLabel11;
     // End of variables declaration//GEN-END:variables
 }

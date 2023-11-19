@@ -29,7 +29,7 @@ public class BookView extends javax.swing.JPanel {
         var grid = this;
         this.setBackground(Cl.bgp);
         for (Book bk: books) {
-            this.add(new book_rect_view(bk));
+            this.add(new book_view_booklist(bk));
         }
     }
 

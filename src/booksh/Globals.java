@@ -9,5 +9,5 @@ package booksh;
  * @author shadman
  */
 public class Globals {
-    
+    public static int user = 1;
 }

@@ -4,10 +4,19 @@
  */
 package booksh;
 
+import java.awt.Image;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.Vector;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import java.sql.*;
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+import javax.swing.JFileChooser;
 import javax.swing.JScrollBar;
 
 /**
@@ -20,6 +29,7 @@ public class ManageBooksPanel extends javax.swing.JPanel {
      * Creates new form ManageBooksPanel
      */
 
+    String cur_image_path = null;
     DefaultTableModel model;
     public ManageBooksPanel() {
         initComponents();
@@ -97,7 +107,7 @@ public class ManageBooksPanel extends javax.swing.JPanel {
             }
            
             // insert new book into database
-            String query_insert = "INSERT INTO book_details(name, author, isbn, price, quantity, genre, rating, year, description) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?) ";
+            String query_insert = "INSERT INTO book_details(name, author, isbn, price, quantity, genre, rating, year, description, cover_photo) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ";
             par = con.prepareStatement(query_insert);
             par.setString(1, name);
             par.setString(2, author);
@@ -108,6 +118,8 @@ public class ManageBooksPanel extends javax.swing.JPanel {
             par.setFloat(7, rating);
             par.setInt(8, year);
             par.setString(9, desc);
+            InputStream is = new FileInputStream(new File(cur_image_path));
+            par.setBlob(10, is);
             if (par.executeUpdate() <= 0) return false;
         } catch (Exception e) {
             e.printStackTrace();
@@ -246,6 +258,10 @@ public class ManageBooksPanel extends javax.swing.JPanel {
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         txt_bookdescription = new javax.swing.JTextField();
+        jLabel20 = new javax.swing.JLabel();
+        lbl_photo = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
+        jLabel22 = new javax.swing.JLabel();
         btn_clear = new rojerusan.RSMaterialButtonCircle();
         jLabel11 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -478,8 +494,8 @@ public class ManageBooksPanel extends javax.swing.JPanel {
         jLabel18.setBackground(new java.awt.Color(51, 102, 255));
         jLabel18.setFont(new java.awt.Font("Glass Antiqua", 0, 20)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel18.setText("Description");
-        jPanel2.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 770, -1, -1));
+        jLabel18.setText("Image");
+        jPanel2.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 850, -1, -1));
 
         jLabel19.setBackground(new java.awt.Color(51, 102, 255));
         jLabel19.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
@@ -497,6 +513,31 @@ public class ManageBooksPanel extends javax.swing.JPanel {
             }
         });
         jPanel2.add(txt_bookdescription, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 810, 230, 30));
+
+        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ImageIcon.png"))); // NOI18N
+        jPanel2.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 900, 40, 50));
+
+        lbl_photo.setBackground(new java.awt.Color(255, 255, 255));
+        lbl_photo.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_photo.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
+        jPanel2.add(lbl_photo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 880, 110, 90));
+
+        jButton3.setBackground(new java.awt.Color(102, 102, 255));
+        jButton3.setFont(new java.awt.Font("Yu Gothic UI", 1, 16)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
+        jButton3.setText("UPLOAD");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 910, 120, 50));
+
+        jLabel22.setBackground(new java.awt.Color(51, 102, 255));
+        jLabel22.setFont(new java.awt.Font("Glass Antiqua", 0, 20)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel22.setText("Description");
+        jPanel2.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 770, -1, -1));
 
         jScrollPane1.setViewportView(jPanel2);
 
@@ -603,6 +644,9 @@ public class ManageBooksPanel extends javax.swing.JPanel {
                 txt_bookrating.setText(String.valueOf(rs.getFloat("rating")));
                 txt_bookyear.setText(String.valueOf(rs.getInt("year")));
                 txt_bookdescription.setText(rs.getString("description"));
+                Blob blob = rs.getBlob("cover_photo");
+                ImageIcon icon = new ImageIcon(blob.getBytes(1L, (int) blob.length()));
+                lbl_photo.setIcon(icon);
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -638,12 +682,31 @@ public class ManageBooksPanel extends javax.swing.JPanel {
         txt_bookdescription.setText("");
     }//GEN-LAST:event_btn_clearActionPerformed
 
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        JFileChooser chooser = new JFileChooser();
+        chooser.showOpenDialog(null);
+        File f = chooser.getSelectedFile();
+        String path = f.getAbsolutePath();
+        try {
+            BufferedImage bi = ImageIO.read(new File(path));
+            Image img = bi.getScaledInstance(160, 160, Image.SCALE_SMOOTH);
+            ImageIcon icon = new ImageIcon(img);
+            lbl_photo.setIcon(icon);
+            cur_image_path = path;
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+
+    }//GEN-LAST:event_jButton3ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private rojerusan.RSMaterialButtonCircle btn_add;
     private rojerusan.RSMaterialButtonCircle btn_clear;
     private rojerusan.RSMaterialButtonCircle btn_modify;
     private rojerusan.RSMaterialButtonCircle btn_remove;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -656,6 +719,8 @@ public class ManageBooksPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -667,6 +732,7 @@ public class ManageBooksPanel extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JLabel lbl_photo;
     private rojerusan.RSTableMetro tbl_booklist;
     private javax.swing.JTextField txt_bookauthor;
     private javax.swing.JTextField txt_bookdescription;

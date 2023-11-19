@@ -501,6 +501,7 @@ public class UserHome extends javax.swing.JFrame {
 
     private void sbp3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sbp3MouseClicked
         // TODO add your handling code here:
+        userCart1.update_list();
         switchpage(3);
     }//GEN-LAST:event_sbp3MouseClicked
 
@@ -521,6 +522,7 @@ public class UserHome extends javax.swing.JFrame {
 
     private void sbp7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sbp7MouseClicked
         // TODO add your handling code here:
+        wishlist1.update_list();
         switchpage(7);
     }//GEN-LAST:event_sbp7MouseClicked
 

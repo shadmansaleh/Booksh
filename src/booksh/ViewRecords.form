@@ -43,7 +43,7 @@
                   <Data value="20/02/23"/>
                   <Data value="12/03/22"/>
                 </Column>
-                <Column editable="true" title="EventType" type="java.lang.String">
+                <Column editable="true" title="Book" type="java.lang.String">
                   <Data value="Borrow"/>
                   <Data value="buy"/>
                 </Column>

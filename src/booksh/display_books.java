@@ -173,7 +173,7 @@ public class display_books extends javax.swing.JPanel {
         jLabel7.setText("price");
         jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 110, -1, -1));
 
-        btn_search.setBackground(new java.awt.Color(251, 51, 51));
+        btn_search.setBackground(new java.awt.Color(102, 102, 255));
         btn_search.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-search-64 white.png"))); // NOI18N
         btn_search.setText("Search");
         btn_search.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -181,7 +181,7 @@ public class display_books extends javax.swing.JPanel {
                 btn_searchMouseClicked(evt);
             }
         });
-        jPanel2.add(btn_search, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 60, 130, 50));
+        jPanel2.add(btn_search, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 60, 130, 60));
 
         txt_name.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(51, 102, 255)));
         txt_name.setPlaceholder("Book Name");

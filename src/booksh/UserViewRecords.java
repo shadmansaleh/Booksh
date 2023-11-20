@@ -62,15 +62,15 @@ public class UserViewRecords extends javax.swing.JPanel {
         txt_bookcount3 = new javax.swing.JLabel();
         jPanel16 = new javax.swing.JPanel();
         txt_bookcount4 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         popular_this_week = new javax.swing.JTable();
-        jLabel5 = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
         popular_this_week2 = new javax.swing.JTable();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
 
         jPanel5.setBackground(new java.awt.Color(204, 204, 255));
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -194,27 +194,11 @@ public class UserViewRecords extends javax.swing.JPanel {
 
         add(jPanel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 560, 220, 130));
 
-        jLabel1.setFont(new java.awt.Font("Kefa", 1, 18)); // NOI18N
-        jLabel1.setText("Rating Given");
-        jLabel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 510, 130, -1));
-
         jLabel2.setBackground(new java.awt.Color(153, 153, 153));
         jLabel2.setFont(new java.awt.Font("Kefa", 1, 18)); // NOI18N
-        jLabel2.setText("Total Read");
+        jLabel2.setText("Popular This Week");
         jLabel2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 70, 110, -1));
-
-        jLabel3.setFont(new java.awt.Font("Kefa", 1, 18)); // NOI18N
-        jLabel3.setText("This Month");
-        jLabel3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 290, 110, -1));
-
-        jLabel4.setBackground(new java.awt.Color(204, 204, 204));
-        jLabel4.setFont(new java.awt.Font("Al Bayan", 1, 18)); // NOI18N
-        jLabel4.setText("Trending");
-        jLabel4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, 190, -1));
 
         popular_this_week.setAutoCreateRowSorter(true);
         popular_this_week.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -244,12 +228,6 @@ public class UserViewRecords extends javax.swing.JPanel {
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, 520, 270));
 
-        jLabel5.setBackground(new java.awt.Color(204, 204, 204));
-        jLabel5.setFont(new java.awt.Font("Al Bayan", 1, 18)); // NOI18N
-        jLabel5.setText("Popular This Week");
-        jLabel5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, -1, -1));
-
         popular_this_week2.setAutoCreateRowSorter(true);
         popular_this_week2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         popular_this_week2.setModel(new javax.swing.table.DefaultTableModel(
@@ -277,6 +255,27 @@ public class UserViewRecords extends javax.swing.JPanel {
         jScrollPane3.setViewportView(popular_this_week2);
 
         add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 520, 260));
+
+        jLabel23.setFont(new java.awt.Font("Glass Antiqua", 1, 24)); // NOI18N
+        jLabel23.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel23.setText("Rating Given");
+        add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 510, -1, -1));
+
+        jLabel5.setBackground(new java.awt.Color(153, 153, 153));
+        jLabel5.setFont(new java.awt.Font("Kefa", 1, 18)); // NOI18N
+        jLabel5.setText("Trending");
+        jLabel5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 110, -1));
+
+        jLabel25.setFont(new java.awt.Font("Glass Antiqua", 1, 24)); // NOI18N
+        jLabel25.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel25.setText("Total Read");
+        add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 70, -1, -1));
+
+        jLabel26.setFont(new java.awt.Font("Glass Antiqua", 1, 24)); // NOI18N
+        jLabel26.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel26.setText("This Month");
+        add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 300, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
@@ -286,7 +285,6 @@ public class UserViewRecords extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -294,8 +292,9 @@ public class UserViewRecords extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;

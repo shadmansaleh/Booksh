@@ -3,27 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/shadman/projects/NetBeansProjects/Booksh/src/booksh/book_view_wishlist.java</file>
-            <file>file:/home/shadman/projects/NetBeansProjects/Booksh/src/booksh/Notification_view.java</file>
-            <file>file:/home/shadman/projects/NetBeansProjects/Booksh/src/booksh/Wishlist.java</file>
-            <file>file:/home/shadman/projects/NetBeansProjects/Booksh/src/booksh/ViewDefaulters.java</file>
-            <file>file:/home/shadman/projects/NetBeansProjects/Booksh/src/booksh/LoginPage.java</file>
-            <file>file:/home/shadman/projects/NetBeansProjects/Booksh/src/booksh/ViewAllRecord.java</file>
-            <file>file:/home/shadman/projects/NetBeansProjects/Booksh/src/booksh/book_view_booklist.java</file>
-            <file>file:/home/shadman/projects/NetBeansProjects/Booksh/src/booksh/Globals.java</file>
-            <file>file:/home/shadman/projects/NetBeansProjects/Booksh/src/booksh/Book.java</file>
-            <file>file:/home/shadman/projects/NetBeansProjects/Booksh/src/booksh/display_books.java</file>
-            <file>file:/home/shadman/projects/NetBeansProjects/Booksh/src/booksh/UserHome.java</file>
-            <file>file:/home/shadman/projects/NetBeansProjects/Booksh/src/booksh/book_view_cart.java</file>
-            <file>file:/home/shadman/projects/NetBeansProjects/Booksh/src/lib/PanelRound.java</file>
             <file>file:/home/shadman/projects/NetBeansProjects/Booksh/src/booksh/subpanels/OrderInfoPanel.java</file>
-            <file>file:/home/shadman/projects/NetBeansProjects/Booksh/src/booksh/subpanels/OrderInfoPanelBuy.java</file>
             <file>file:/home/shadman/projects/NetBeansProjects/Booksh/src/booksh/ViewRecords.java</file>
-            <file>file:/home/shadman/projects/NetBeansProjects/Booksh/src/booksh/book_view_borrowed.java</file>
-            <file>file:/home/shadman/projects/NetBeansProjects/Booksh/src/booksh/ViewIssuesBooks.java</file>
-            <file>file:/home/shadman/projects/NetBeansProjects/Booksh/src/booksh/AboutUs.java</file>
-            <file>file:/home/shadman/projects/NetBeansProjects/Booksh/src/booksh/UserProfile.java</file>
-            <file>file:/home/shadman/projects/NetBeansProjects/Booksh/src/booksh/Manageoders.java</file>
+            <file>file:/home/shadman/projects/NetBeansProjects/Booksh/src/booksh/ViewAllRecord.java</file>
+            <file>file:/home/shadman/projects/NetBeansProjects/Booksh/src/booksh/UserViewRecords.java</file>
+            <file>file:/home/shadman/projects/NetBeansProjects/Booksh/src/booksh/UserHome.java</file>
         </group>
     </open-files>
 </project-private>

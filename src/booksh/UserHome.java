@@ -334,7 +334,7 @@ public class UserHome extends javax.swing.JFrame {
         sbl5.setFont(new java.awt.Font("Glass Antiqua", 1, 18)); // NOI18N
         sbl5.setForeground(new java.awt.Color(153, 153, 153));
         sbl5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/adminIcons/icons8_View_Details_26px.png"))); // NOI18N
-        sbl5.setText("View Records");
+        sbl5.setText("Stats");
         sbp5.add(sbl5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, -1, -1));
 
         sidebar.add(sbp5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 410, 300, 60));
@@ -673,7 +673,7 @@ public class UserHome extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private booksh.display_books display_books1;
+    public booksh.display_books display_books1;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel24;
@@ -705,12 +705,12 @@ public class UserHome extends javax.swing.JFrame {
     private javax.swing.JPanel sbp7;
     private javax.swing.JPanel sbp8;
     private javax.swing.JPanel sidebar;
-    private booksh.UserCart userCart1;
-    private booksh.UserHomeIntro userHomeIntro1;
-    private booksh.UserIssuedBooks userIssuedBooks1;
-    private booksh.UserProfile userProfile1;
-    private booksh.UserReturnBook userReturnBook1;
-    private booksh.UserViewRecords userViewRecords1;
-    private booksh.Wishlist wishlist1;
+    public booksh.UserCart userCart1;
+    public booksh.UserHomeIntro userHomeIntro1;
+    public booksh.UserIssuedBooks userIssuedBooks1;
+    public booksh.UserProfile userProfile1;
+    public booksh.UserReturnBook userReturnBook1;
+    public booksh.UserViewRecords userViewRecords1;
+    public booksh.Wishlist wishlist1;
     // End of variables declaration//GEN-END:variables
 }

@@ -195,6 +195,7 @@ public class book_view_wishlist extends javax.swing.JPanel {
             var pat = con.prepareStatement(query);
             pat.setInt(1, this.book.book_id);
             pat.setInt(2, Globals.user_id);
+            Globals.user_home.wishlist1.update_list();
             pat.executeUpdate();
         } catch (Exception e) {
             e.printStackTrace();

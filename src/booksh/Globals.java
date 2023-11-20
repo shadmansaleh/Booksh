@@ -11,4 +11,6 @@ package booksh;
 public class Globals {
     public static int user_id = 1;
     public static String username = "Shadman";
+    public static HomePage admin_home = null;
+    public static UserHome user_home = null;
 }

@@ -53,9 +53,11 @@ public class LoginPage extends javax.swing.JFrame {
                 Globals.user_id = rs.getInt("id");
                 Globals.username = rs.getString("name");
                 if (rb_user.isSelected()) {
-                    new UserHome().setVisible(true);
+                    Globals.user_home = new UserHome();
+                    Globals.user_home.setVisible(true);
                 } else {
-                    new HomePage().setVisible(true);
+                    Globals.admin_home = new HomePage();
+                    Globals.admin_home.setVisible(true);
                 }
                 this.setVisible(false);
                 this.dispose();
@@ -130,7 +132,7 @@ public class LoginPage extends javax.swing.JFrame {
         jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 350, -1, -1));
 
         rSLabelImage1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Library_statistics.jpeg"))); // NOI18N
-        jPanel2.add(rSLabelImage1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, -10, 990, 840));
+        jPanel2.add(rSLabelImage1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 990, 840));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 990, 830));
 

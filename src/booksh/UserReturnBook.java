@@ -35,26 +35,25 @@ public class UserReturnBook extends javax.swing.JPanel {
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
         jSpinner1 = new javax.swing.JSpinner();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
+        txt_username = new app.bolivia.swing.JCTextField();
+        txt_username2 = new app.bolivia.swing.JCTextField();
+        txt_username3 = new app.bolivia.swing.JCTextField();
+        txt_username4 = new app.bolivia.swing.JCTextField();
         jPanel1 = new javax.swing.JPanel();
         jLabel23 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
-        jPanel6 = new javax.swing.JPanel();
         jLabel27 = new javax.swing.JLabel();
         jLabel28 = new javax.swing.JLabel();
-        txt_CUSTOMER = new javax.swing.JTextField();
         jLabel29 = new javax.swing.JLabel();
         date_DueDate = new rojeru_san.componentes.RSDateChooser();
         jLabel30 = new javax.swing.JLabel();
         date_IssueDate = new rojeru_san.componentes.RSDateChooser();
         jLabel31 = new javax.swing.JLabel();
         rSButtonMetro1 = new rojerusan.RSButtonMetro();
-        txt_BookID = new javax.swing.JTextField();
+        txt_username1 = new app.bolivia.swing.JCTextField();
+        txt_username5 = new app.bolivia.swing.JCTextField();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -83,69 +82,85 @@ public class UserReturnBook extends javax.swing.JPanel {
         jPanel4.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 200, 180, 10));
 
         jLabel8.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel8.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Helvetica Neue", 0, 20)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Rating:");
-        jPanel4.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 560, 120, -1));
+        jPanel4.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 560, 120, -1));
 
         jLabel9.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel9.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Helvetica Neue", 0, 20)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Book Id:");
         jPanel4.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 80, -1));
 
         jLabel10.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel10.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Helvetica Neue", 0, 20)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Book Name:");
         jPanel4.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 120, -1));
 
         jLabel11.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel11.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Helvetica Neue", 0, 20)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Author:");
         jPanel4.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 440, 120, -1));
 
         jLabel12.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel12.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Helvetica Neue", 0, 20)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("Quantity:");
         jPanel4.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 500, 120, -1));
 
-        jTextField1.setBackground(new java.awt.Color(255, 153, 0));
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
-        jPanel4.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 500, 220, 30));
-
         jSpinner1.setModel(new javax.swing.SpinnerNumberModel(0, 0, 5, 1));
-        jPanel4.add(jSpinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 560, -1, -1));
+        jPanel4.add(jSpinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 570, -1, -1));
 
-        jTextField2.setBackground(new java.awt.Color(255, 153, 0));
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        txt_username.setBackground(new java.awt.Color(255, 153, 0));
+        txt_username.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
+        txt_username.setForeground(new java.awt.Color(255, 255, 255));
+        txt_username.setFont(new java.awt.Font("Glass Antiqua", 0, 20)); // NOI18N
+        txt_username.setPhColor(new java.awt.Color(51, 102, 255));
+        txt_username.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                txt_usernameActionPerformed(evt);
             }
         });
-        jPanel4.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 310, 220, 30));
+        jPanel4.add(txt_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 490, 220, -1));
 
-        jTextField3.setBackground(new java.awt.Color(255, 153, 0));
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        txt_username2.setBackground(new java.awt.Color(255, 153, 0));
+        txt_username2.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
+        txt_username2.setForeground(new java.awt.Color(255, 255, 255));
+        txt_username2.setFont(new java.awt.Font("Glass Antiqua", 0, 20)); // NOI18N
+        txt_username2.setPhColor(new java.awt.Color(51, 102, 255));
+        txt_username2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                txt_username2ActionPerformed(evt);
             }
         });
-        jPanel4.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 370, 220, 30));
+        jPanel4.add(txt_username2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 360, 220, -1));
 
-        jTextField4.setBackground(new java.awt.Color(255, 153, 0));
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        txt_username3.setBackground(new java.awt.Color(255, 153, 0));
+        txt_username3.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
+        txt_username3.setForeground(new java.awt.Color(255, 255, 255));
+        txt_username3.setFont(new java.awt.Font("Glass Antiqua", 0, 20)); // NOI18N
+        txt_username3.setPhColor(new java.awt.Color(51, 102, 255));
+        txt_username3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                txt_username3ActionPerformed(evt);
             }
         });
-        jPanel4.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 430, 220, 30));
+        jPanel4.add(txt_username3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 420, 220, -1));
+
+        txt_username4.setBackground(new java.awt.Color(255, 153, 0));
+        txt_username4.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
+        txt_username4.setForeground(new java.awt.Color(255, 255, 255));
+        txt_username4.setFont(new java.awt.Font("Glass Antiqua", 0, 20)); // NOI18N
+        txt_username4.setPhColor(new java.awt.Color(51, 102, 255));
+        txt_username4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_username4ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(txt_username4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 310, 220, -1));
 
         add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 420, 810));
 
@@ -164,72 +179,46 @@ public class UserReturnBook extends javax.swing.JPanel {
         jLabel24.setText("Student Details");
         jPanel1.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 240, 60));
 
-        jLabel25.setFont(new java.awt.Font("Helvetica Neue", 1, 25)); // NOI18N
+        jLabel25.setFont(new java.awt.Font("Helvetica Neue", 0, 32)); // NOI18N
         jLabel25.setForeground(new java.awt.Color(255, 102, 102));
         jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/receipt.png"))); // NOI18N
         jLabel25.setText("Return Book");
-        jPanel1.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 150, 230, 60));
+        jPanel1.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 70, 230, 60));
 
-        jPanel6.setBackground(new java.awt.Color(255, 102, 0));
-
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 160, Short.MAX_VALUE)
-        );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 10, Short.MAX_VALUE)
-        );
-
-        jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 200, 160, 10));
-
-        jLabel27.setFont(new java.awt.Font("Glass Antiqua", 0, 20)); // NOI18N
+        jLabel27.setFont(new java.awt.Font("Glass Antiqua", 0, 24)); // NOI18N
         jLabel27.setForeground(new java.awt.Color(255, 102, 0));
         jLabel27.setText("Customer Id:");
-        jPanel1.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 340, -1, -1));
+        jPanel1.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 350, -1, -1));
 
-        jLabel28.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
+        jLabel28.setFont(new java.awt.Font("Glass Antiqua", 0, 24)); // NOI18N
         jLabel28.setForeground(new java.awt.Color(255, 255, 255));
         jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AddNewBookIcons/icons8_Moleskine_26px.png"))); // NOI18N
-        jPanel1.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 380, -1, -1));
+        jPanel1.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 390, -1, -1));
 
-        txt_CUSTOMER.setBackground(new java.awt.Color(204, 204, 204));
-        txt_CUSTOMER.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
-        txt_CUSTOMER.setForeground(new java.awt.Color(255, 255, 255));
-        txt_CUSTOMER.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
-        txt_CUSTOMER.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_CUSTOMERActionPerformed(evt);
-            }
-        });
-        jPanel1.add(txt_CUSTOMER, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 340, 230, 30));
-
-        jLabel29.setFont(new java.awt.Font("Glass Antiqua", 0, 20)); // NOI18N
+        jLabel29.setFont(new java.awt.Font("Glass Antiqua", 0, 24)); // NOI18N
         jLabel29.setForeground(new java.awt.Color(255, 102, 0));
         jLabel29.setText("Rerun Date:");
-        jPanel1.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 520, -1, -1));
+        jPanel1.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 530, -1, -1));
 
         date_DueDate.setForeground(new java.awt.Color(51, 51, 0));
         date_DueDate.setColorBackground(new java.awt.Color(255, 51, 0));
         date_DueDate.setPlaceholder("Select Return Date\n");
-        jPanel1.add(date_DueDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 510, -1, -1));
+        jPanel1.add(date_DueDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 520, -1, -1));
 
-        jLabel30.setFont(new java.awt.Font("Glass Antiqua", 0, 20)); // NOI18N
+        jLabel30.setFont(new java.awt.Font("Glass Antiqua", 0, 24)); // NOI18N
         jLabel30.setForeground(new java.awt.Color(255, 102, 0));
         jLabel30.setText("Book Id:");
-        jPanel1.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 270, -1, -1));
+        jPanel1.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 280, -1, -1));
 
         date_IssueDate.setForeground(new java.awt.Color(51, 51, 0));
         date_IssueDate.setColorBackground(new java.awt.Color(255, 51, 0));
         date_IssueDate.setPlaceholder("Select Issue Date\n");
-        jPanel1.add(date_IssueDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 420, -1, -1));
+        jPanel1.add(date_IssueDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 430, -1, -1));
 
-        jLabel31.setFont(new java.awt.Font("Glass Antiqua", 0, 20)); // NOI18N
+        jLabel31.setFont(new java.awt.Font("Glass Antiqua", 0, 24)); // NOI18N
         jLabel31.setForeground(new java.awt.Color(255, 102, 0));
         jLabel31.setText("Issue Date:");
-        jPanel1.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 430, -1, -1));
+        jPanel1.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 440, -1, -1));
 
         rSButtonMetro1.setText("RETURN BOOK");
         rSButtonMetro1.addActionListener(new java.awt.event.ActionListener() {
@@ -237,49 +226,60 @@ public class UserReturnBook extends javax.swing.JPanel {
                 rSButtonMetro1ActionPerformed(evt);
             }
         });
-        jPanel1.add(rSButtonMetro1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 600, 180, 60));
+        jPanel1.add(rSButtonMetro1, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 610, 180, 60));
 
-        txt_BookID.setBackground(new java.awt.Color(204, 204, 204));
-        txt_BookID.setFont(new java.awt.Font("Glass Antiqua", 0, 18)); // NOI18N
-        txt_BookID.setForeground(new java.awt.Color(255, 255, 255));
-        txt_BookID.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
-        txt_BookID.addActionListener(new java.awt.event.ActionListener() {
+        txt_username1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(0, 0, 0)));
+        txt_username1.setForeground(new java.awt.Color(255, 255, 255));
+        txt_username1.setFont(new java.awt.Font("Glass Antiqua", 0, 20)); // NOI18N
+        txt_username1.setPhColor(new java.awt.Color(51, 102, 255));
+        txt_username1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_BookIDActionPerformed(evt);
+                txt_username1ActionPerformed(evt);
             }
         });
-        jPanel1.add(txt_BookID, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 270, 230, 30));
+        jPanel1.add(txt_username1, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 340, 220, -1));
 
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        txt_username5.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(0, 0, 0)));
+        txt_username5.setForeground(new java.awt.Color(255, 255, 255));
+        txt_username5.setFont(new java.awt.Font("Glass Antiqua", 0, 20)); // NOI18N
+        txt_username5.setPhColor(new java.awt.Color(51, 102, 255));
+        txt_username5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_username5ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(txt_username5, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 270, 220, -1));
+
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1200, 750));
     }// </editor-fold>//GEN-END:initComponents
-
-    private void txt_BookIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_BookIDActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_BookIDActionPerformed
-
-    private void txt_CUSTOMERActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_CUSTOMERActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_CUSTOMERActionPerformed
 
     private void rSButtonMetro1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSButtonMetro1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_rSButtonMetro1ActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void txt_usernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_usernameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_txt_usernameActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void txt_username1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_username1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_txt_username1ActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void txt_username2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_username2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_txt_username2ActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void txt_username3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_username3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_txt_username3ActionPerformed
+
+    private void txt_username4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_username4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_username4ActionPerformed
+
+    private void txt_username5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_username5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_username5ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -303,14 +303,13 @@ public class UserReturnBook extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
     private javax.swing.JSpinner jSpinner1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
     private rojerusan.RSButtonMetro rSButtonMetro1;
-    private javax.swing.JTextField txt_BookID;
-    private javax.swing.JTextField txt_CUSTOMER;
+    private app.bolivia.swing.JCTextField txt_username;
+    private app.bolivia.swing.JCTextField txt_username1;
+    private app.bolivia.swing.JCTextField txt_username2;
+    private app.bolivia.swing.JCTextField txt_username3;
+    private app.bolivia.swing.JCTextField txt_username4;
+    private app.bolivia.swing.JCTextField txt_username5;
     // End of variables declaration//GEN-END:variables
 }

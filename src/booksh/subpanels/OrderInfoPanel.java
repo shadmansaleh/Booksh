@@ -75,6 +75,9 @@ public class OrderInfoPanel extends javax.swing.JPanel {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btn_approveMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_approveMouseEntered(evt);
+            }
         });
         btn_approve.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -142,6 +145,7 @@ public class OrderInfoPanel extends javax.swing.JPanel {
             pat.setInt(1, book_id);
             pat.setInt(2, user_id);
             pat.executeUpdate();
+            Globals.admin_home.manageoders1.notification_view.load_notifications();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -156,10 +160,16 @@ public class OrderInfoPanel extends javax.swing.JPanel {
             pat.setInt(1, book_id);
             pat.setInt(2, user_id);
             pat.executeUpdate();
+            Globals.admin_home.manageoders1.notification_view.load_notifications();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }//GEN-LAST:event_btn_rejectMouseClicked
+
+    private void btn_approveMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_approveMouseEntered
+        // TODO add your handling code here:
+        btn_approve.setBackground(Co);
+    }//GEN-LAST:event_btn_approveMouseEntered
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

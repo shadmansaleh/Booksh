@@ -204,6 +204,7 @@ public class book_view_borrowed extends javax.swing.JPanel {
             pat.setInt(1, this.book.book_id);
             pat.setInt(2, Globals.user_id);
             pat.executeUpdate();
+            Globals.user_home.userIssuedBooks1.update_list();
         } catch (Exception e) {
             e.printStackTrace();
         }

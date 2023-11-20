@@ -41,6 +41,8 @@ public class Manageoders extends javax.swing.JPanel {
         add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 30, 290, 90));
 
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+
+        notification_view.setLayout(new java.awt.BorderLayout());
         jScrollPane1.setViewportView(notification_view);
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 1200, 630));
@@ -50,6 +52,6 @@ public class Manageoders extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel11;
     private javax.swing.JScrollPane jScrollPane1;
-    private booksh.Notification_view notification_view;
+    public booksh.Notification_view notification_view;
     // End of variables declaration//GEN-END:variables
 }

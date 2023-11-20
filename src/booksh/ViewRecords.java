@@ -39,7 +39,7 @@ public class ViewRecords extends javax.swing.JPanel {
                 {"12/03/22", "buy", "user2", "user2 bought by author"}
             },
             new String [] {
-                "Date", "EventType", "User", "description"
+                "Date", "Book", "User", "description"
             }
         ) {
             Class[] types = new Class [] {

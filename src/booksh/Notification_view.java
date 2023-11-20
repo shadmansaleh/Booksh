@@ -58,7 +58,9 @@ public class Notification_view extends javax.swing.JPanel {
                     oderinfo.set_data(user_id, book_id, uname, book, author);
                     this.add(oderinfo);
                 }
-
+                this.invalidate();
+                this.validate();
+                this.repaint();
             }
         } catch (Exception e) {
             e.printStackTrace();

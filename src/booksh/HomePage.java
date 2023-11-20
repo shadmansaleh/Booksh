@@ -653,6 +653,7 @@ public class HomePage extends javax.swing.JFrame {
     private void sbp4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sbp4MouseClicked
         // TODO add your handling code here:
         switchpage(4);
+        manageoders1.notification_view.load_notifications();
     }//GEN-LAST:event_sbp4MouseClicked
 
     private void sbp5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sbp5MouseClicked
@@ -800,7 +801,7 @@ public class HomePage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel home_page;
+    public javax.swing.JPanel home_page;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel13;
@@ -827,9 +828,9 @@ public class HomePage extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTabbedPane main_view;
-    private booksh.ManageBooksPanel manageBooksPanel2;
-    private booksh.ManageCustomerPanel manageCustomerPanel1;
-    private booksh.Manageoders manageoders1;
+    public booksh.ManageBooksPanel manageBooksPanel2;
+    public booksh.ManageCustomerPanel manageCustomerPanel1;
+    public booksh.Manageoders manageoders1;
     private javax.swing.JPanel pnl_pichart;
     private rojerusan.RSLabelImage rSLabelImage1;
     private javax.swing.JPanel sb_dashboard;
@@ -854,8 +855,8 @@ public class HomePage extends javax.swing.JFrame {
     private javax.swing.JLabel txt_borrowcount;
     private javax.swing.JLabel txt_defaultercount;
     private javax.swing.JLabel txt_usercount;
-    private booksh.ViewDefaulters viewDefaulters1;
-    private booksh.ViewIssuesBooks viewIssuesBooks1;
-    private booksh.ViewRecords viewRecords1;
+    public booksh.ViewDefaulters viewDefaulters1;
+    public booksh.ViewIssuesBooks viewIssuesBooks1;
+    public booksh.ViewRecords viewRecords1;
     // End of variables declaration//GEN-END:variables
 }

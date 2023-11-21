@@ -77,7 +77,6 @@ public class UserCart extends javax.swing.JPanel {
         ScrollView = new javax.swing.JScrollPane();
         jLabel1 = new javax.swing.JLabel();
         lbl_ammount = new javax.swing.JLabel();
-        btn_confirm = new necesario.RSMaterialButtonCircle();
         jLabel11 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
@@ -92,20 +91,16 @@ public class UserCart extends javax.swing.JPanel {
         lbl_ammount.setText("0.00");
         add(lbl_ammount, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 600, -1, -1));
 
-        btn_confirm.setText("Confirm");
-        add(btn_confirm, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 610, 270, 70));
-
         jLabel11.setFont(new java.awt.Font("Glass Antiqua", 1, 36)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(101, 101, 101));
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-buy-50.png"))); // NOI18N
-        jLabel11.setText("Cart");
+        jLabel11.setText("Pending");
         add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, -10, 190, 90));
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane ScrollView;
-    private necesario.RSMaterialButtonCircle btn_confirm;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel lbl_ammount;

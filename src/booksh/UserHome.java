@@ -200,9 +200,10 @@ public class UserHome extends javax.swing.JFrame {
 
         lb_uname.setFont(new java.awt.Font("Glass Antiqua", 1, 20)); // NOI18N
         lb_uname.setForeground(new java.awt.Color(255, 255, 255));
+        lb_uname.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lb_uname.setIcon(new javax.swing.ImageIcon(getClass().getResource("/adminIcons/male_user_50px.png"))); // NOI18N
         lb_uname.setText("User");
-        jPanel1.add(lb_uname, new org.netbeans.lib.awtextra.AbsoluteConstraints(1290, 10, 120, -1));
+        jPanel1.add(lb_uname, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 10, 180, -1));
 
         jLabel2.setFont(new java.awt.Font("Glass Antiqua", 0, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -378,7 +379,7 @@ public class UserHome extends javax.swing.JFrame {
         sbl3.setFont(new java.awt.Font("Glass Antiqua", 1, 18)); // NOI18N
         sbl3.setForeground(new java.awt.Color(153, 153, 153));
         sbl3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/adminIcons/icons8_Read_Online_26px.png"))); // NOI18N
-        sbl3.setText("Cart");
+        sbl3.setText("Pending oders");
         sbp3.add(sbl3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, -1, -1));
 
         sidebar.add(sbp3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 300, 60));

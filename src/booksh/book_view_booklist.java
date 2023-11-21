@@ -103,6 +103,15 @@ public class book_view_booklist extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         pnl_contrast.setBackground(new java.awt.Color(102, 102, 255));
+        pnl_contrast.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                pnl_contrastAncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
         pnl_contrast.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lb_bookname.setFont(new java.awt.Font("Glass Antiqua", 1, 36)); // NOI18N
@@ -312,6 +321,10 @@ public class book_view_booklist extends javax.swing.JPanel {
         // TODO add your handling code here:
         unhide_info();
     }//GEN-LAST:event_ic_wishlistMouseEntered
+
+    private void pnl_contrastAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_pnl_contrastAncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pnl_contrastAncestorAdded
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

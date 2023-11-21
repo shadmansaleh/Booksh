@@ -161,11 +161,21 @@ public class UserHomeIntro extends javax.swing.JPanel {
         jPanel16.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 120, 400, 140));
 
         rSLabelImage1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LibaryImages/pexels-polina-zimmerman-3747505.jpg"))); // NOI18N
+        rSLabelImage1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                rSLabelImage1KeyPressed(evt);
+            }
+        });
         jPanel16.add(rSLabelImage1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 1210, 1280));
 
         jPanel26.setBackground(new java.awt.Color(155, 61, 27));
         jPanel26.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jPanel26.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel26.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel26MouseClicked(evt);
+            }
+        });
         jPanel26.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel24.setFont(new java.awt.Font("Yu Gothic UI", 0, 18)); // NOI18N
@@ -246,6 +256,11 @@ public class UserHomeIntro extends javax.swing.JPanel {
         jPanel28.setBackground(new java.awt.Color(155, 61, 27));
         jPanel28.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jPanel28.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel28.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel28MouseClicked(evt);
+            }
+        });
         jPanel28.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel38.setFont(new java.awt.Font("Yu Gothic UI", 1, 16)); // NOI18N
@@ -262,9 +277,9 @@ public class UserHomeIntro extends javax.swing.JPanel {
                 jLabel38MouseExited(evt);
             }
         });
-        jPanel28.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 130, 40));
+        jPanel28.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 140, 40));
 
-        jPanel27.add(jPanel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 290, 130, 40));
+        jPanel27.add(jPanel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 290, 140, 40));
 
         jPanel16.add(jPanel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 1850, -1, 530));
 
@@ -525,11 +540,21 @@ public class UserHomeIntro extends javax.swing.JPanel {
         jPanel37.setBackground(new java.awt.Color(155, 61, 27));
         jPanel37.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jPanel37.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel37.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel37MouseClicked(evt);
+            }
+        });
         jPanel37.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel86.setFont(new java.awt.Font("Yu Gothic UI", 1, 16)); // NOI18N
         jLabel86.setForeground(new java.awt.Color(255, 255, 255));
         jLabel86.setText("ORDER NOW");
+        jLabel86.addHierarchyListener(new java.awt.event.HierarchyListener() {
+            public void hierarchyChanged(java.awt.event.HierarchyEvent evt) {
+                jLabel86HierarchyChanged(evt);
+            }
+        });
         jLabel86.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel86MouseClicked(evt);
@@ -543,7 +568,7 @@ public class UserHomeIntro extends javax.swing.JPanel {
         });
         jPanel37.add(jLabel86, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, -1, 40));
 
-        jPanel35.add(jPanel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 290, 130, 40));
+        jPanel35.add(jPanel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 290, 140, 40));
 
         jPanel16.add(jPanel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 1850, -1, 530));
 
@@ -636,6 +661,29 @@ public class UserHomeIntro extends javax.swing.JPanel {
     private void jLabel86MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel86MouseExited
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabel86MouseExited
+
+    private void jPanel26MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel26MouseClicked
+        // TODO add your handling code here:
+        Globals.user_home.switchpage(1);
+    }//GEN-LAST:event_jPanel26MouseClicked
+
+    private void jLabel86HierarchyChanged(java.awt.event.HierarchyEvent evt) {//GEN-FIRST:event_jLabel86HierarchyChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel86HierarchyChanged
+
+    private void jPanel37MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel37MouseClicked
+        // TODO add your handling code here:
+        Globals.user_home.switchpage(1);
+    }//GEN-LAST:event_jPanel37MouseClicked
+
+    private void jPanel28MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel28MouseClicked
+        // TODO add your handling code here:
+        Globals.user_home.switchpage(1);
+    }//GEN-LAST:event_jPanel28MouseClicked
+
+    private void rSLabelImage1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_rSLabelImage1KeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rSLabelImage1KeyPressed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

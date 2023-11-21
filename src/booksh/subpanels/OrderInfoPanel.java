@@ -78,6 +78,9 @@ public class OrderInfoPanel extends javax.swing.JPanel {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btn_approveMouseEntered(evt);
             }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_approveMouseExited(evt);
+            }
         });
         btn_approve.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -168,8 +171,13 @@ public class OrderInfoPanel extends javax.swing.JPanel {
 
     private void btn_approveMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_approveMouseEntered
         // TODO add your handling code here:
-        btn_approve.setBackground(Co);
+        btn_approve.setBackground(new java.awt.Color(102, 102, 255, 200));
     }//GEN-LAST:event_btn_approveMouseEntered
+
+    private void btn_approveMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_approveMouseExited
+        // TODO add your handling code here:
+        btn_approve.setBackground(new java.awt.Color(102, 102, 255, 0));
+    }//GEN-LAST:event_btn_approveMouseExited
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
